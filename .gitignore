@@ -1,0 +1,14 @@
+# Ignore common data + model files
+*.npy
+*.csv
+*.h5
+*.pth
+*.zip
+*.tar.gz
+
+# Ignore folders with large files (relative to repo root)
+TGCA_dataset/
+src/scripts/results/
+
+
+

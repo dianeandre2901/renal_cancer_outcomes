@@ -1,0 +1,351 @@
+Job started at Sat  5 Jul 23:41:37 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Job ended at Sat  5 Jul 23:43:07 BST 2025
+Job started at Sat  5 Jul 23:55:35 BST 2025 on cx3-6-17.cx3.hpc.ic.ac.uk
+Job ended at Sat  5 Jul 23:55:36 BST 2025
+Job started at Sun  6 Jul 00:06:01 BST 2025 on cx3-4-27.cx3.hpc.ic.ac.uk
+==================================================
+TRIAL 0 | area_um=192 | patches/slide=64 | batch_size=32 | lr=5.48e-04 | wd=3.97e-06 | dropout=0.26
+Job ended at Sun  6 Jul 00:07:26 BST 2025
+Job started at Sun  6 Jul 14:26:53 BST 2025 on cx3-4-28.cx3.hpc.ic.ac.uk
+JOB STARTED
+==================================================
+TRIAL 0 | area_um=128 | patches/slide=32 | batch_size=8 | lr=4.09e-05 | wd=2.26e-06 | dropout=0.47
+Train patches: 640, Val patches: 320
+Epoch 01 | Train Loss: 0.6643, Val Loss: 0.7169, Train Acc: 0.586, Val Acc: 0.531, Slide Acc: 0.600, Patch AUC: 0.396
+Patch Confusion Matrix:
+ [[148  76]
+ [ 74  22]]
+Epoch 02 | Train Loss: 0.5731, Val Loss: 0.7551, Train Acc: 0.706, Val Acc: 0.537, Slide Acc: 0.600, Patch AUC: 0.397
+Patch Confusion Matrix:
+ [[150  74]
+ [ 74  22]]
+Epoch 03 | Train Loss: 0.5042, Val Loss: 0.8077, Train Acc: 0.752, Val Acc: 0.516, Slide Acc: 0.600, Patch AUC: 0.412
+Patch Confusion Matrix:
+ [[145  79]
+ [ 76  20]]
+Epoch 04 | Train Loss: 0.4671, Val Loss: 0.8715, Train Acc: 0.798, Val Acc: 0.494, Slide Acc: 0.600, Patch AUC: 0.367
+Patch Confusion Matrix:
+ [[141  83]
+ [ 79  17]]
+Epoch 05 | Train Loss: 0.3749, Val Loss: 0.9550, Train Acc: 0.831, Val Acc: 0.509, Slide Acc: 0.700, Patch AUC: 0.397
+Patch Confusion Matrix:
+ [[140  84]
+ [ 73  23]]
+----------------------------------------
+Trial 0 done: Val Slide Acc = 0.7000
+==================================================
+TRIAL 1 | area_um=384 | patches/slide=256 | batch_size=16 | lr=2.22e-05 | wd=7.90e-04 | dropout=0.50
+Train patches: 4871, Val patches: 2062
+Epoch 01 | Train Loss: 0.6277, Val Loss: 0.8431, Train Acc: 0.638, Val Acc: 0.548, Slide Acc: 0.600, Patch AUC: 0.385
+Patch Confusion Matrix:
+ [[1035  303]
+ [ 630   94]]
+Epoch 02 | Train Loss: 0.4842, Val Loss: 0.9586, Train Acc: 0.769, Val Acc: 0.534, Slide Acc: 0.500, Patch AUC: 0.374
+Patch Confusion Matrix:
+ [[1001  337]
+ [ 623  101]]
+Epoch 03 | Train Loss: 0.3959, Val Loss: 1.1135, Train Acc: 0.825, Val Acc: 0.533, Slide Acc: 0.500, Patch AUC: 0.387
+Patch Confusion Matrix:
+ [[1004  334]
+ [ 628   96]]
+Epoch 04 | Train Loss: 0.3290, Val Loss: 1.2168, Train Acc: 0.852, Val Acc: 0.504, Slide Acc: 0.500, Patch AUC: 0.389
+Patch Confusion Matrix:
+ [[911 427]
+ [596 128]]
+Epoch 05 | Train Loss: 0.2767, Val Loss: 1.3897, Train Acc: 0.884, Val Acc: 0.523, Slide Acc: 0.500, Patch AUC: 0.400
+Patch Confusion Matrix:
+ [[942 396]
+ [587 137]]
+----------------------------------------
+Trial 1 done: Val Slide Acc = 0.5000
+==================================================
+TRIAL 2 | area_um=128 | patches/slide=256 | batch_size=32 | lr=1.30e-05 | wd=1.54e-05 | dropout=0.25
+Train patches: 5120, Val patches: 2560
+Epoch 01 | Train Loss: 0.6296, Val Loss: 0.7187, Train Acc: 0.654, Val Acc: 0.557, Slide Acc: 0.700, Patch AUC: 0.358
+Patch Confusion Matrix:
+ [[1317  475]
+ [ 660  108]]
+Epoch 02 | Train Loss: 0.5008, Val Loss: 0.8700, Train Acc: 0.782, Val Acc: 0.520, Slide Acc: 0.600, Patch AUC: 0.335
+Patch Confusion Matrix:
+ [[1202  590]
+ [ 640  128]]
+Epoch 03 | Train Loss: 0.3956, Val Loss: 1.0513, Train Acc: 0.839, Val Acc: 0.509, Slide Acc: 0.600, Patch AUC: 0.317
+Patch Confusion Matrix:
+ [[1194  598]
+ [ 659  109]]
+Epoch 04 | Train Loss: 0.3279, Val Loss: 1.4246, Train Acc: 0.870, Val Acc: 0.507, Slide Acc: 0.600, Patch AUC: 0.335
+Patch Confusion Matrix:
+ [[1194  598]
+ [ 663  105]]
+Epoch 05 | Train Loss: 0.2796, Val Loss: 1.2416, Train Acc: 0.886, Val Acc: 0.511, Slide Acc: 0.600, Patch AUC: 0.339
+Patch Confusion Matrix:
+ [[1184  608]
+ [ 645  123]]
+----------------------------------------
+Trial 2 done: Val Slide Acc = 0.6000
+==================================================
+TRIAL 3 | area_um=192 | patches/slide=128 | batch_size=32 | lr=1.37e-04 | wd=1.51e-06 | dropout=0.51
+Train patches: 2560, Val patches: 1280
+Epoch 01 | Train Loss: 0.4880, Val Loss: 1.1554, Train Acc: 0.755, Val Acc: 0.507, Slide Acc: 0.500, Patch AUC: 0.310
+Patch Confusion Matrix:
+ [[614 282]
+ [349  35]]
+Epoch 02 | Train Loss: 0.2615, Val Loss: 1.5948, Train Acc: 0.890, Val Acc: 0.487, Slide Acc: 0.600, Patch AUC: 0.320
+Patch Confusion Matrix:
+ [[556 340]
+ [316  68]]
+Epoch 03 | Train Loss: 0.1822, Val Loss: 1.9231, Train Acc: 0.926, Val Acc: 0.471, Slide Acc: 0.500, Patch AUC: 0.314
+Patch Confusion Matrix:
+ [[541 355]
+ [322  62]]
+Epoch 04 | Train Loss: 0.1247, Val Loss: 2.0584, Train Acc: 0.952, Val Acc: 0.453, Slide Acc: 0.500, Patch AUC: 0.325
+Patch Confusion Matrix:
+ [[518 378]
+ [322  62]]
+Epoch 05 | Train Loss: 0.1038, Val Loss: 2.2505, Train Acc: 0.963, Val Acc: 0.491, Slide Acc: 0.600, Patch AUC: 0.337
+Patch Confusion Matrix:
+ [[583 313]
+ [338  46]]
+----------------------------------------
+Trial 3 done: Val Slide Acc = 0.6000
+==================================================
+TRIAL 4 | area_um=384 | patches/slide=32 | batch_size=32 | lr=2.55e-04 | wd=3.86e-04 | dropout=0.61
+Train patches: 640, Val patches: 320
+Epoch 01 | Train Loss: 0.6309, Val Loss: 0.7857, Train Acc: 0.619, Val Acc: 0.531, Slide Acc: 0.700, Patch AUC: 0.329
+Patch Confusion Matrix:
+ [[163  61]
+ [ 89   7]]
+Epoch 02 | Train Loss: 0.4714, Val Loss: 0.9918, Train Acc: 0.777, Val Acc: 0.512, Slide Acc: 0.500, Patch AUC: 0.309
+Patch Confusion Matrix:
+ [[155  69]
+ [ 87   9]]
+Epoch 03 | Train Loss: 0.3678, Val Loss: 1.2104, Train Acc: 0.838, Val Acc: 0.503, Slide Acc: 0.500, Patch AUC: 0.315
+Patch Confusion Matrix:
+ [[152  72]
+ [ 87   9]]
+Epoch 04 | Train Loss: 0.2636, Val Loss: 1.3711, Train Acc: 0.912, Val Acc: 0.500, Slide Acc: 0.500, Patch AUC: 0.291
+Patch Confusion Matrix:
+ [[151  73]
+ [ 87   9]]
+Epoch 05 | Train Loss: 0.1876, Val Loss: 1.6115, Train Acc: 0.931, Val Acc: 0.531, Slide Acc: 0.500, Patch AUC: 0.333
+Patch Confusion Matrix:
+ [[156  68]
+ [ 82  14]]
+----------------------------------------
+Trial 4 done: Val Slide Acc = 0.5000
+==================================================
+TRIAL 5 | area_um=192 | patches/slide=128 | batch_size=16 | lr=5.79e-04 | wd=6.03e-04 | dropout=0.30
+Train patches: 2560, Val patches: 1280
+Epoch 01 | Train Loss: 0.3900, Val Loss: 2.0866, Train Acc: 0.816, Val Acc: 0.502, Slide Acc: 0.600, Patch AUC: 0.324
+Patch Confusion Matrix:
+ [[576 320]
+ [318  66]]
+Epoch 02 | Train Loss: 0.2303, Val Loss: 2.0706, Train Acc: 0.904, Val Acc: 0.522, Slide Acc: 0.600, Patch AUC: 0.349
+Patch Confusion Matrix:
+ [[595 301]
+ [311  73]]
+Epoch 03 | Train Loss: 0.2321, Val Loss: 1.5580, Train Acc: 0.912, Val Acc: 0.502, Slide Acc: 0.500, Patch AUC: 0.383
+Patch Confusion Matrix:
+ [[570 326]
+ [312  72]]
+Epoch 04 | Train Loss: 0.2111, Val Loss: 2.6759, Train Acc: 0.924, Val Acc: 0.487, Slide Acc: 0.500, Patch AUC: 0.364
+Patch Confusion Matrix:
+ [[550 346]
+ [311  73]]
+Epoch 05 | Train Loss: 0.1427, Val Loss: 3.3715, Train Acc: 0.943, Val Acc: 0.439, Slide Acc: 0.400, Patch AUC: 0.310
+Patch Confusion Matrix:
+ [[505 391]
+ [327  57]]
+----------------------------------------
+Trial 5 done: Val Slide Acc = 0.4000
+==================================================
+TRIAL 6 | area_um=192 | patches/slide=256 | batch_size=32 | lr=6.77e-05 | wd=1.41e-06 | dropout=0.35
+Train patches: 5120, Val patches: 2543
+Epoch 01 | Train Loss: 0.4890, Val Loss: 1.2267, Train Acc: 0.754, Val Acc: 0.455, Slide Acc: 0.500, Patch AUC: 0.300
+Patch Confusion Matrix:
+ [[1042  733]
+ [ 654  114]]
+Epoch 02 | Train Loss: 0.2515, Val Loss: 1.7455, Train Acc: 0.896, Val Acc: 0.494, Slide Acc: 0.600, Patch AUC: 0.313
+Patch Confusion Matrix:
+ [[1149  626]
+ [ 661  107]]
+Epoch 03 | Train Loss: 0.1651, Val Loss: 1.8936, Train Acc: 0.933, Val Acc: 0.478, Slide Acc: 0.600, Patch AUC: 0.298
+Patch Confusion Matrix:
+ [[1117  658]
+ [ 670   98]]
+Epoch 04 | Train Loss: 0.1220, Val Loss: 2.2327, Train Acc: 0.951, Val Acc: 0.468, Slide Acc: 0.500, Patch AUC: 0.293
+Patch Confusion Matrix:
+ [[1070  705]
+ [ 649  119]]
+Epoch 05 | Train Loss: 0.0919, Val Loss: 2.1581, Train Acc: 0.965, Val Acc: 0.460, Slide Acc: 0.500, Patch AUC: 0.313
+Patch Confusion Matrix:
+ [[1051  724]
+ [ 648  120]]
+----------------------------------------
+Trial 6 done: Val Slide Acc = 0.5000
+==================================================
+TRIAL 7 | area_um=192 | patches/slide=64 | batch_size=32 | lr=9.65e-04 | wd=1.29e-05 | dropout=0.25
+Train patches: 1280, Val patches: 640
+Epoch 01 | Train Loss: 0.4143, Val Loss: 2.1281, Train Acc: 0.808, Val Acc: 0.406, Slide Acc: 0.400, Patch AUC: 0.306
+Patch Confusion Matrix:
+ [[202 246]
+ [134  58]]
+Epoch 02 | Train Loss: 0.2568, Val Loss: 1.9383, Train Acc: 0.888, Val Acc: 0.497, Slide Acc: 0.500, Patch AUC: 0.368
+Patch Confusion Matrix:
+ [[289 159]
+ [163  29]]
+Epoch 03 | Train Loss: 0.1818, Val Loss: 2.2272, Train Acc: 0.927, Val Acc: 0.495, Slide Acc: 0.600, Patch AUC: 0.267
+Patch Confusion Matrix:
+ [[298 150]
+ [173  19]]
+Epoch 04 | Train Loss: 0.1688, Val Loss: 2.6666, Train Acc: 0.934, Val Acc: 0.472, Slide Acc: 0.600, Patch AUC: 0.310
+Patch Confusion Matrix:
+ [[287 161]
+ [177  15]]
+Epoch 05 | Train Loss: 0.1340, Val Loss: 2.5062, Train Acc: 0.952, Val Acc: 0.447, Slide Acc: 0.400, Patch AUC: 0.374
+Patch Confusion Matrix:
+ [[214 234]
+ [120  72]]
+----------------------------------------
+Trial 7 done: Val Slide Acc = 0.4000
+==================================================
+TRIAL 8 | area_um=192 | patches/slide=64 | batch_size=32 | lr=5.80e-05 | wd=6.49e-06 | dropout=0.49
+Train patches: 1280, Val patches: 640
+Epoch 01 | Train Loss: 0.6425, Val Loss: 0.7456, Train Acc: 0.620, Val Acc: 0.569, Slide Acc: 0.700, Patch AUC: 0.395
+Patch Confusion Matrix:
+ [[326 122]
+ [154  38]]
+Epoch 02 | Train Loss: 0.5325, Val Loss: 1.2133, Train Acc: 0.730, Val Acc: 0.547, Slide Acc: 0.600, Patch AUC: 0.339
+Patch Confusion Matrix:
+ [[316 132]
+ [158  34]]
+Epoch 03 | Train Loss: 0.4287, Val Loss: 1.0710, Train Acc: 0.814, Val Acc: 0.534, Slide Acc: 0.500, Patch AUC: 0.333
+Patch Confusion Matrix:
+ [[315 133]
+ [165  27]]
+Epoch 04 | Train Loss: 0.3633, Val Loss: 1.2283, Train Acc: 0.852, Val Acc: 0.523, Slide Acc: 0.500, Patch AUC: 0.334
+Patch Confusion Matrix:
+ [[302 146]
+ [159  33]]
+Epoch 05 | Train Loss: 0.3054, Val Loss: 1.4522, Train Acc: 0.887, Val Acc: 0.500, Slide Acc: 0.400, Patch AUC: 0.340
+Patch Confusion Matrix:
+ [[284 164]
+ [156  36]]
+----------------------------------------
+Trial 8 done: Val Slide Acc = 0.4000
+==================================================
+TRIAL 9 | area_um=128 | patches/slide=64 | batch_size=16 | lr=1.01e-05 | wd=4.00e-06 | dropout=0.28
+Train patches: 1280, Val patches: 640
+Epoch 01 | Train Loss: 0.6894, Val Loss: 1.6791, Train Acc: 0.554, Val Acc: 0.433, Slide Acc: 0.300, Patch AUC: 0.433
+Patch Confusion Matrix:
+ [[181 267]
+ [ 96  96]]
+Epoch 02 | Train Loss: 0.6395, Val Loss: 0.7840, Train Acc: 0.662, Val Acc: 0.486, Slide Acc: 0.500, Patch AUC: 0.375
+Patch Confusion Matrix:
+ [[265 183]
+ [146  46]]
+Epoch 03 | Train Loss: 0.6037, Val Loss: 0.8531, Train Acc: 0.716, Val Acc: 0.523, Slide Acc: 0.600, Patch AUC: 0.390
+Patch Confusion Matrix:
+ [[292 156]
+ [149  43]]
+Epoch 04 | Train Loss: 0.5574, Val Loss: 0.7579, Train Acc: 0.736, Val Acc: 0.470, Slide Acc: 0.500, Patch AUC: 0.354
+Patch Confusion Matrix:
+ [[254 194]
+ [145  47]]
+Epoch 05 | Train Loss: 0.5195, Val Loss: 0.7531, Train Acc: 0.788, Val Acc: 0.519, Slide Acc: 0.600, Patch AUC: 0.375
+Patch Confusion Matrix:
+ [[296 152]
+ [156  36]]
+----------------------------------------
+Trial 9 done: Val Slide Acc = 0.6000
+======================================================================
+Best trial:
+Value: 0.7
+Params:
+  area_um: 128
+  max_patches_per_slide: 32
+  batch_size: 8
+  lr: 4.088110990013785e-05
+  weight_decay: 2.2560963747612366e-06
+  dropout: 0.4717225893854518
+Job ended at Sun  6 Jul 23:52:01 BST 2025
+Job started at Mon  7 Jul 16:58:28 BST 2025 on cx3-11-6.cx3.hpc.ic.ac.uk
+JOB STARTED
+==================================================
+TRIAL 0 | area_um=256 | batch_size=32 | lr=7.95e-04 | wd=4.87e-05 | dropout=0.36
+Job ended at Mon  7 Jul 16:59:32 BST 2025
+Job started at Mon  7 Jul 17:09:39 BST 2025 on cx3-11-6.cx3.hpc.ic.ac.uk
+JOB STARTED
+==================================================
+TRIAL 0 | area_um=256 | batch_size=16 | lr=1.36e-04 | wd=2.17e-04 | dropout=0.33
+Train patches: 31446, Val patches: 25726
+Epoch 01 | Train Loss: 0.1807, Val Loss: 1.7465, Train Acc: 0.924, Val Acc: 0.692, Slide Acc: 0.650, Patch AUC: 0.781
+Patch Confusion Matrix:
+ [[7962 2392]
+ [5527 9845]]
+Epoch 02 | Train Loss: 0.0735, Val Loss: 2.2019, Train Acc: 0.973, Val Acc: 0.662, Slide Acc: 0.750, Patch AUC: 0.775
+Patch Confusion Matrix:
+ [[8311 2043]
+ [6660 8712]]
+Epoch 03 | Train Loss: 0.0587, Val Loss: 2.1089, Train Acc: 0.980, Val Acc: 0.652, Slide Acc: 0.800, Patch AUC: 0.785
+Patch Confusion Matrix:
+ [[8903 1451]
+ [7494 7878]]
+Epoch 04 | Train Loss: 0.0535, Val Loss: 1.9690, Train Acc: 0.982, Val Acc: 0.657, Slide Acc: 0.750, Patch AUC: 0.784
+Patch Confusion Matrix:
+ [[8202 2152]
+ [6666 8706]]
+Epoch 05 | Train Loss: 0.0450, Val Loss: 1.7871, Train Acc: 0.984, Val Acc: 0.670, Slide Acc: 0.700, Patch AUC: 0.797
+Patch Confusion Matrix:
+ [[9201 1153]
+ [7337 8035]]
+Epoch 06 | Train Loss: 0.0374, Val Loss: 2.3607, Train Acc: 0.987, Val Acc: 0.683, Slide Acc: 0.800, Patch AUC: 0.773
+Patch Confusion Matrix:
+ [[8333 2021]
+ [6146 9226]]
+Epoch 07 | Train Loss: 0.0413, Val Loss: 1.9840, Train Acc: 0.986, Val Acc: 0.698, Slide Acc: 0.750, Patch AUC: 0.769
+Patch Confusion Matrix:
+ [[7988 2366]
+ [5398 9974]]
+----------------------------------------
+Trial 0 done: Val Slide Acc = 0.7500
+==================================================
+TRIAL 1 | area_um=384 | batch_size=8 | lr=1.47e-04 | wd=2.37e-06 | dropout=0.57
+Train patches: 13496, Val patches: 11101
+Epoch 01 | Train Loss: 0.3605, Val Loss: 1.6668, Train Acc: 0.838, Val Acc: 0.531, Slide Acc: 0.500, Patch AUC: 0.635
+Patch Confusion Matrix:
+ [[3638  741]
+ [4460 2262]]
+Epoch 02 | Train Loss: 0.2090, Val Loss: 1.5162, Train Acc: 0.918, Val Acc: 0.610, Slide Acc: 0.700, Patch AUC: 0.732
+Patch Confusion Matrix:
+ [[3667  712]
+ [3618 3104]]
+Epoch 03 | Train Loss: 0.1581, Val Loss: 1.5701, Train Acc: 0.939, Val Acc: 0.593, Slide Acc: 0.650, Patch AUC: 0.682
+Patch Confusion Matrix:
+ [[3391  988]
+ [3531 3191]]
+Epoch 04 | Train Loss: 0.1184, Val Loss: 1.7406, Train Acc: 0.955, Val Acc: 0.641, Slide Acc: 0.600, Patch AUC: 0.729
+Patch Confusion Matrix:
+ [[3446  933]
+ [3055 3667]]
+Epoch 05 | Train Loss: 0.1013, Val Loss: 1.7121, Train Acc: 0.962, Val Acc: 0.673, Slide Acc: 0.700, Patch AUC: 0.777
+Patch Confusion Matrix:
+ [[3564  815]
+ [2810 3912]]
+Epoch 06 | Train Loss: 0.0890, Val Loss: 1.9767, Train Acc: 0.967, Val Acc: 0.636, Slide Acc: 0.700, Patch AUC: 0.739
+Patch Confusion Matrix:
+ [[3644  735]
+ [3310 3412]]
+Epoch 07 | Train Loss: 0.0785, Val Loss: 2.1263, Train Acc: 0.971, Val Acc: 0.582, Slide Acc: 0.600, Patch AUC: 0.714
+Patch Confusion Matrix:
+ [[3500  879]
+ [3763 2959]]
+----------------------------------------
+Trial 1 done: Val Slide Acc = 0.6000
+==================================================
+TRIAL 2 | area_um=128 | batch_size=16 | lr=6.50e-04 | wd=3.15e-06 | dropout=0.38
+Train patches: 133313, Val patches: 107500
+Epoch 01 | Train Loss: 0.0946, Val Loss: 2.3921, Train Acc: 0.964, Val Acc: 0.656, Slide Acc: 0.700, Patch AUC: 0.759
+Patch Confusion Matrix:
+ [[38043  6398]
+ [30544 32515]]

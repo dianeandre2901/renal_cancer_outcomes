@@ -1,0 +1,46 @@
+=>> PBS: job killed: walltime 64888 exceeded limit 64800
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/model4_coords_extract.py", line 87, in <module>
+    train_dataset = PrecomputedPatchDataset(first_20_train, transform=transform, max_patches_per_slide=patch_cap)
+  File "/rds/general/user/dla24/home/thesis/src/models/model4_coords_extract.py", line 44, in __init__
+    self.df = pd.read_csv(patch_csv)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/io/common.py", line 719, in get_handle
+    if _is_binary_mode(path_or_buf, mode) and "b" not in mode:
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/io/common.py", line 1181, in _is_binary_mode
+    return isinstance(handle, _get_binary_io_classes()) or "b" in getattr(
+TypeError: argument of type 'method' is not iterable
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/model4_coords_extract.py", line 156, in <module>
+    for imgs, labels, _ in train_loader:
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1515, in _next_data
+    return self._process_data(data, worker_id)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+    data.reraise()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/_utils.py", line 750, in reraise
+    raise exception
+AttributeError: Caught AttributeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/thesis/src/models/model4_coords_extract.py", line 66, in __getitem__
+    if self.transform:
+AttributeError: 'PrecomputedPatchDataset' object has no attribute 'transform'
+
+/rds/general/user/dla24/home/thesis/src/models/model4_coords_extract.py:52: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  self.df = self.df.groupby("slide_id").apply(
+/rds/general/user/dla24/home/thesis/src/models/model4_coords_extract.py:52: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  self.df = self.df.groupby("slide_id").apply(

@@ -1,0 +1,61 @@
+Job started at Fri  4 Jul 09:39:58 BST 2025 on cx3-12-0.cx3.hpc.ic.ac.uk
+Job started at Fri  4 Jul 09:40:49 BST 2025 on cx3-12-0.cx3.hpc.ic.ac.uk
+Job ended at Fri  4 Jul 09:42:17 BST 2025
+Job started at Fri  4 Jul 09:56:59 BST 2025 on cx3-12-0.cx3.hpc.ic.ac.uk
+Job ended at Fri  4 Jul 09:58:27 BST 2025
+Job started at Fri  4 Jul 10:00:22 BST 2025 on cx3-12-0.cx3.hpc.ic.ac.uk
+Job ended at Fri  4 Jul 10:01:52 BST 2025
+Job started at Fri  4 Jul 10:09:51 BST 2025 on cx3-12-0.cx3.hpc.ic.ac.uk
+torch.Size([3, 224, 224]) 0 TCGA-B2-4099-01Z-00-DX1
+Epoch 01 | Train Loss 0.5800 | Val Loss 0.7044 | Train Acc 0.688 | Val Acc 0.656 | Patch AUC 0.639 | Slide Acc 0.733
+Patch-level Confusion Matrix:
+ [[770 230]
+ [286 214]]
+Epoch 02 | Train Loss 0.3687 | Val Loss 0.9000 | Train Acc 0.827 | Val Acc 0.631 | Patch AUC 0.604 | Slide Acc 0.667
+Patch-level Confusion Matrix:
+ [[743 257]
+ [297 203]]
+Epoch 03 | Train Loss 0.2777 | Val Loss 0.9620 | Train Acc 0.883 | Val Acc 0.643 | Patch AUC 0.615 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[741 259]
+ [277 223]]
+Epoch 04 | Train Loss 0.2151 | Val Loss 1.1419 | Train Acc 0.908 | Val Acc 0.617 | Patch AUC 0.592 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[728 272]
+ [302 198]]
+Epoch 05 | Train Loss 0.1651 | Val Loss 1.1398 | Train Acc 0.939 | Val Acc 0.609 | Patch AUC 0.597 | Slide Acc 0.667
+Patch-level Confusion Matrix:
+ [[691 309]
+ [278 222]]
+Epoch 06 | Train Loss 0.1622 | Val Loss 1.1680 | Train Acc 0.938 | Val Acc 0.619 | Patch AUC 0.586 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[740 260]
+ [312 188]]
+Epoch 07 | Train Loss 0.1602 | Val Loss 1.1776 | Train Acc 0.937 | Val Acc 0.625 | Patch AUC 0.597 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[745 255]
+ [308 192]]
+Epoch 08 | Train Loss 0.1562 | Val Loss 1.2092 | Train Acc 0.943 | Val Acc 0.641 | Patch AUC 0.587 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[779 221]
+ [317 183]]
+Epoch 09 | Train Loss 0.1528 | Val Loss 1.1886 | Train Acc 0.941 | Val Acc 0.625 | Patch AUC 0.593 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[748 252]
+ [310 190]]
+Epoch 10 | Train Loss 0.1516 | Val Loss 1.2123 | Train Acc 0.939 | Val Acc 0.637 | Patch AUC 0.591 | Slide Acc 0.733
+Patch-level Confusion Matrix:
+ [[779 221]
+ [323 177]]
+              precision    recall  f1-score   support
+
+       Alive       0.71      0.78      0.74      1000
+        Dead       0.44      0.35      0.39       500
+
+    accuracy                           0.64      1500
+   macro avg       0.58      0.57      0.57      1500
+weighted avg       0.62      0.64      0.63      1500
+
+Job ended at Fri  4 Jul 15:53:35 BST 2025
+Job started at Mon  7 Jul 17:15:05 BST 2025 on cx3-4-27.cx3.hpc.ic.ac.uk
+Job ended at Mon  7 Jul 18:38:07 BST 2025

@@ -1,0 +1,77 @@
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 10, in <module>
+    from extract_standardized_patches import TissueWSIPatchDataset
+ModuleNotFoundError: No module named 'extract_standardized_patches'
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 43
+    def __init__(self, df, area_um=256, out_px=224, tissue_downsample=32, tissue_thresh=0.8, transform=None, max_patches_per_slide=None):
+    ^
+IndentationError: expected an indented block after class definition on line 42
+[I 2025-07-06 00:07:24,751] A new study created in memory with name: no-name-2348b924-fedb-4c8f-b50e-cfc4db5f431c
+[W 2025-07-06 00:07:24,854] Trial 0 failed with parameters: {'area_um': 192, 'max_patches_per_slide': 64, 'batch_size': 32, 'lr': 0.0005483480098707975, 'weight_decay': 3.9693238027874094e-06, 'dropout': 0.26315814578470886} because of the following error: AttributeError("'TissueWSIPatchDataset' object has no attribute '_find_all_tissue_coords'").
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 111, in objective
+    train_dataset = TissueWSIPatchDataset(df_train.head(20), area_um=area_um, out_px=224, transform=transform, max_patches_per_slide=max_patches)
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 58, in __init__
+    coords = self._find_all_tissue_coords(slide_path, patch_px)
+AttributeError: 'TissueWSIPatchDataset' object has no attribute '_find_all_tissue_coords'
+[W 2025-07-06 00:07:24,874] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 210, in <module>
+    study.optimize(objective, n_trials=10)  # increase n_trials for real search!
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/study.py", line 489, in optimize
+    _optimize(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 64, in _optimize
+    _optimize_sequential(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 161, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 253, in _run_trial
+    raise func_err
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 111, in objective
+    train_dataset = TissueWSIPatchDataset(df_train.head(20), area_um=area_um, out_px=224, transform=transform, max_patches_per_slide=max_patches)
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 58, in __init__
+    coords = self._find_all_tissue_coords(slide_path, patch_px)
+AttributeError: 'TissueWSIPatchDataset' object has no attribute '_find_all_tissue_coords'
+[I 2025-07-06 14:28:16,426] A new study created in memory with name: no-name-389f0504-aa8b-477a-ba0a-f2faddee0b13
+[I 2025-07-06 14:42:17,066] Trial 0 finished with value: 0.7 and parameters: {'area_um': 128, 'max_patches_per_slide': 32, 'batch_size': 8, 'lr': 4.088110990013785e-05, 'weight_decay': 2.2560963747612366e-06, 'dropout': 0.4717225893854518}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 16:21:10,317] Trial 1 finished with value: 0.5 and parameters: {'area_um': 384, 'max_patches_per_slide': 256, 'batch_size': 16, 'lr': 2.215723129294878e-05, 'weight_decay': 0.0007897251933749287, 'dropout': 0.5003981237751696}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 18:01:58,140] Trial 2 finished with value: 0.6 and parameters: {'area_um': 128, 'max_patches_per_slide': 256, 'batch_size': 32, 'lr': 1.296662202995477e-05, 'weight_decay': 1.5447305306111213e-05, 'dropout': 0.24576474935029125}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 19:10:13,478] Trial 3 finished with value: 0.6 and parameters: {'area_um': 192, 'max_patches_per_slide': 128, 'batch_size': 32, 'lr': 0.00013729516179325968, 'weight_decay': 1.5084832376291463e-06, 'dropout': 0.5137280219831137}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 19:35:15,527] Trial 4 finished with value: 0.5 and parameters: {'area_um': 384, 'max_patches_per_slide': 32, 'batch_size': 32, 'lr': 0.0002545320540534681, 'weight_decay': 0.0003857432185919605, 'dropout': 0.6110132377545696}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 20:34:08,147] Trial 5 finished with value: 0.4 and parameters: {'area_um': 192, 'max_patches_per_slide': 128, 'batch_size': 16, 'lr': 0.0005788380488130586, 'weight_decay': 0.0006029859356993845, 'dropout': 0.30228135788746274}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 22:26:17,853] Trial 6 finished with value: 0.5 and parameters: {'area_um': 192, 'max_patches_per_slide': 256, 'batch_size': 32, 'lr': 6.765499521267959e-05, 'weight_decay': 1.411511644410769e-06, 'dropout': 0.3451327077875511}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 22:55:13,507] Trial 7 finished with value: 0.4 and parameters: {'area_um': 192, 'max_patches_per_slide': 64, 'batch_size': 32, 'lr': 0.0009648149367817092, 'weight_decay': 1.2893565039333715e-05, 'dropout': 0.25058043288189397}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 23:22:52,366] Trial 8 finished with value: 0.4 and parameters: {'area_um': 192, 'max_patches_per_slide': 64, 'batch_size': 32, 'lr': 5.795522345110763e-05, 'weight_decay': 6.494498470112962e-06, 'dropout': 0.48791898100960884}. Best is trial 0 with value: 0.7.
+[I 2025-07-06 23:51:59,519] Trial 9 finished with value: 0.6 and parameters: {'area_um': 128, 'max_patches_per_slide': 64, 'batch_size': 16, 'lr': 1.012636667394106e-05, 'weight_decay': 4.000890712683267e-06, 'dropout': 0.28485477876176923}. Best is trial 0 with value: 0.7.
+[I 2025-07-07 16:59:31,127] A new study created in memory with name: no-name-a9665908-3962-4fe0-a146-93e044cd387b
+[W 2025-07-07 16:59:31,255] Trial 0 failed with parameters: {'area_um': 256, 'batch_size': 32, 'lr': 0.0007951870897468237, 'weight_decay': 4.865908196424715e-05, 'dropout': 0.357131188046935} because of the following error: NameError("name 'max_patches' is not defined").
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 110, in objective
+    train_dataset = TissueWSIPatchDataset(df_train.head(20), area_um=area_um, out_px=224, transform=transform, max_patches_per_slide=max_patches)
+NameError: name 'max_patches' is not defined
+[W 2025-07-07 16:59:31,273] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 209, in <module>
+    study.optimize(objective, n_trials=15)  # increase n_trials for real search!
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/study.py", line 489, in optimize
+    _optimize(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 64, in _optimize
+    _optimize_sequential(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 161, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 253, in _run_trial
+    raise func_err
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optuna_tune_model3.py", line 110, in objective
+    train_dataset = TissueWSIPatchDataset(df_train.head(20), area_um=area_um, out_px=224, transform=transform, max_patches_per_slide=max_patches)
+NameError: name 'max_patches' is not defined
+[I 2025-07-07 17:10:47,936] A new study created in memory with name: no-name-c6ca07b5-8371-480f-93b7-39447373b8df
+[I 2025-07-08 03:09:24,521] Trial 0 finished with value: 0.75 and parameters: {'area_um': 256, 'batch_size': 16, 'lr': 0.00013609272815042473, 'weight_decay': 0.00021745627769844715, 'dropout': 0.32590098156892855}. Best is trial 0 with value: 0.75.
+[I 2025-07-08 08:59:23,410] Trial 1 finished with value: 0.6 and parameters: {'area_um': 384, 'batch_size': 8, 'lr': 0.00014656628313385953, 'weight_decay': 2.3658147883572753e-06, 'dropout': 0.5716116091071123}. Best is trial 0 with value: 0.75.
+=>> PBS: job killed: walltime 86406 exceeded limit 86400

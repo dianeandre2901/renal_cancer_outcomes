@@ -1,0 +1,52 @@
+/rds/general/user/dla24/home/miniforge3/envs/r-env/bin/python
+Python 3.13.2
+TCGA-BP-5168-01Z-00-DX1: dimensions 115177x76883
+Detected tissue fraction in thumbnail: 0.27
+joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/externals/loky/process_executor.py", line 490, in _process_worker
+    r = call_item()
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/parallel.py", line 607, in __call__
+    return [func(*args, **kwargs) for func, args, kwargs in self.items]
+            ~~~~^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/thesis/src/extract_patches512.py", line 23, in save_patch
+    patch.save(os.path.join(out_folder, f"patch_{x}_{y}.png"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/PIL/Image.py", line 2591, in save
+    fp = builtins.open(filename, "w+b")
+OSError: [Errno 122] Disk quota exceeded: '/rds/general/user/dla24/home/thesis/TGCA_dataset/patches_512/TCGA-CJ-4873-01Z-00-DX1/patch_58368_89600.png'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/extract_patches512.py", line 64, in <module>
+    Parallel(n_jobs=16)(
+    ~~~~~~~~~~~~~~~~~~~^
+        delayed(save_patch)(slide_path, x, y, out_folder) for x, y in coords
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/parallel.py", line 2072, in __call__
+    return output if self.return_generator else list(output)
+                                                ~~~~^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/parallel.py", line 1682, in _get_outputs
+    yield from self._retrieve()
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/parallel.py", line 1784, in _retrieve
+    self._raise_error_fast()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/parallel.py", line 1859, in _raise_error_fast
+    error_job.get_result(self.timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/parallel.py", line 758, in get_result
+    return self._return_or_raise()
+           ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/joblib/parallel.py", line 773, in _return_or_raise
+    raise self._result
+OSError: [Errno 122] Disk quota exceeded: '/rds/general/user/dla24/home/thesis/TGCA_dataset/patches_512/TCGA-CJ-4873-01Z-00-DX1/patch_58368_89600.png'
+Exception ignored on flushing sys.stdout:
+OSError: [Errno 122] Disk quota exceeded

@@ -1,0 +1,222 @@
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 13, in <module>
+    from pycox.models.loss import CoxPHLoss
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/pycox/__init__.py", line 10, in <module>
+    import pycox.evaluation
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/pycox/evaluation/__init__.py", line 2, in <module>
+    from pycox.evaluation.eval_surv import EvalSurv
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/pycox/evaluation/eval_surv.py", line 6, in <module>
+    from pycox.evaluation import ipcw, admin
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/pycox/evaluation/ipcw.py", line 2, in <module>
+    import scipy
+ModuleNotFoundError: No module named 'scipy'
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 147, in <module>
+    train_loss = train_epoch(model, train_loader, criterion, optimizer, device)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 96, in train_epoch
+    for imgs, times, events in loader:
+ValueError: too many values to unpack (expected 3)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 192, in <module>
+    t, e).concordance_td('antolini')
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/pycox/evaluation/eval_surv.py", line 190, in concordance_td
+    return concordance_td(self.durations, self.events, self.surv.values,
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/pycox/evaluation/concordance.py", line 93, in concordance_td
+    assert durations.shape[0] == surv.shape[1] == surv_idx.shape[0] == events.shape[0]
+IndexError: tuple index out of range
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 219, in <module>
+    tr_loss = train_epoch(model, train_loader, criterion, optimizer, device)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 164, in train_epoch
+    risk_patch = model(patches)  # [B*N, 1]
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 126, in forward
+    feats = self.features(x)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torchvision/models/efficientnet.py", line 164, in forward
+    result = self.block(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 432, in forward
+    return F.silu(input, inplace=self.inplace)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/functional.py", line 2379, in silu
+    return torch._C._nn.silu_(input)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 920.00 MiB. GPU 0 has a total capacity of 23.64 GiB of which 844.50 MiB is free. Including non-PyTorch memory, this process has 22.82 GiB memory in use. Of the allocated memory 22.61 GiB is allocated by PyTorch, and 23.72 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 110, in <module>
+    train_ds = WSI_PatientDataset(df_train, patch_size=256, n_patches_per_slide=n_patches_per_slide, transform=transform)
+TypeError: WSI_PatientDataset.__init__() got an unexpected keyword argument 'n_patches_per_slide'
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 219, in <module>
+    tr_loss = train_epoch(model, train_loader, criterion, optimizer, device)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 164, in train_epoch
+    risk_patch = model(patches)  # [B*N, 1]
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 126, in forward
+    feats = self.features(x)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torchvision/models/efficientnet.py", line 164, in forward
+    result = self.block(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 193, in forward
+    return F.batch_norm(
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/functional.py", line 2822, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 52.00 MiB. GPU 0 has a total capacity of 23.64 GiB of which 26.50 MiB is free. Including non-PyTorch memory, this process has 23.62 GiB memory in use. Of the allocated memory 23.19 GiB is allocated by PyTorch, and 230.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 219, in <module>
+    tr_loss = train_epoch(model, train_loader, criterion, optimizer, device)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 164, in train_epoch
+    risk_patch = model(patches)  # [B*N, 1]
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 126, in forward
+    feats = self.features(x)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torchvision/models/efficientnet.py", line 164, in forward
+    result = self.block(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 193, in forward
+    return F.batch_norm(
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/functional.py", line 2822, in batch_norm
+    return torch.batch_norm(
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 52.00 MiB. GPU 0 has a total capacity of 23.64 GiB of which 26.50 MiB is free. Including non-PyTorch memory, this process has 23.62 GiB memory in use. Of the allocated memory 23.19 GiB is allocated by PyTorch, and 230.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 219, in <module>
+    tr_loss = train_epoch(model, train_loader, criterion, optimizer, device)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 164, in train_epoch
+    risk_patch = model(patches)  # [B*N, 1]
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/model1_flypatch_effnet_survival.py", line 126, in forward
+    feats = self.features(x)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torchvision/models/efficientnet.py", line 164, in forward
+    result = self.block(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/torch-env/lib/python3.10/site-packages/torchvision/ops/misc.py", line 260, in forward
+    return scale * input
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 138.00 MiB. GPU 0 has a total capacity of 23.64 GiB of which 10.50 MiB is free. Including non-PyTorch memory, this process has 23.63 GiB memory in use. Of the allocated memory 23.14 GiB is allocated by PyTorch, and 300.43 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,207 @@
+/rds/general/user/dla24/home/miniforge3/envs/r-env/bin/python
+Python 3.13.2
+TCGA-BP-5168-01Z-00-DX1: dimensions 115177x76883
+Detected tissue fraction in thumbnail: 0.27
+TCGA-BP-5168-01Z-00-DX1: extracting 9021 patches...
+TCGA-BP-5168-01Z-00-DX1: Saved 9021 patches in compressed format.
+TCGA-B2-4099-01Z-00-DX1: dimensions 164990x30418
+Detected tissue fraction in thumbnail: 0.22
+TCGA-B2-4099-01Z-00-DX1: extracting 4130 patches...
+TCGA-B2-4099-01Z-00-DX1: Saved 4130 patches in compressed format.
+TCGA-B0-4696-01Z-00-DX1: dimensions 88250x88366
+Detected tissue fraction in thumbnail: 0.46
+TCGA-B0-4696-01Z-00-DX1: extracting 13642 patches...
+TCGA-B0-4696-01Z-00-DX1: Saved 13642 patches in compressed format.
+TCGA-B0-5710-01Z-00-DX1: dimensions 116068x84537
+Detected tissue fraction in thumbnail: 0.52
+TCGA-B0-5710-01Z-00-DX1: extracting 19221 patches...
+TCGA-B0-5710-01Z-00-DX1: Saved 19221 patches in compressed format.
+TCGA-AK-3428-01Z-00-DX1: dimensions 53783x41374
+Detected tissue fraction in thumbnail: 0.27
+TCGA-AK-3428-01Z-00-DX1: extracting 2309 patches...
+TCGA-AK-3428-01Z-00-DX1: Saved 2309 patches in compressed format.
+TCGA-BP-5183-01Z-00-DX1: dimensions 65267x46693
+Detected tissue fraction in thumbnail: 0.39
+TCGA-BP-5183-01Z-00-DX1: extracting 4499 patches...
+TCGA-BP-5183-01Z-00-DX1: Saved 4499 patches in compressed format.
+TCGA-DV-5568-01Z-00-DX1: dimensions 97843x82100
+Detected tissue fraction in thumbnail: 0.41
+TCGA-DV-5568-01Z-00-DX1: extracting 12667 patches...
+TCGA-DV-5568-01Z-00-DX1: Saved 12667 patches in compressed format.
+TCGA-DV-A4VX-01Z-00-DX1: dimensions 108528x86904
+Detected tissue fraction in thumbnail: 0.46
+TCGA-DV-A4VX-01Z-00-DX1: extracting 16407 patches...
+TCGA-DV-A4VX-01Z-00-DX1: Saved 16407 patches in compressed format.
+TCGA-A3-3307-01Z-00-DX1: dimensions 47600x54354
+Detected tissue fraction in thumbnail: 0.37
+TCGA-A3-3307-01Z-00-DX1: extracting 3585 patches...
+TCGA-A3-3307-01Z-00-DX1: Saved 3585 patches in compressed format.
+TCGA-B0-4843-01Z-00-DX1: dimensions 90169x77222
+Detected tissue fraction in thumbnail: 0.46
+TCGA-B0-4843-01Z-00-DX1: extracting 12074 patches...
+TCGA-B0-4843-01Z-00-DX1: Saved 12074 patches in compressed format.
+TCGA-B8-4146-01Z-00-DX1: dimensions 94006x42259
+Detected tissue fraction in thumbnail: 0.48
+TCGA-B8-4146-01Z-00-DX1: extracting 7211 patches...
+TCGA-B8-4146-01Z-00-DX1: Saved 7211 patches in compressed format.
+TCGA-BP-4987-01Z-00-DX1: dimensions 95021x69441
+Detected tissue fraction in thumbnail: 0.49
+TCGA-BP-4987-01Z-00-DX1: extracting 12180 patches...
+TCGA-BP-4987-01Z-00-DX1: Saved 12180 patches in compressed format.
+TCGA-A3-3365-01Z-00-DX1: dimensions 26858x25731
+Detected tissue fraction in thumbnail: 0.37
+TCGA-A3-3365-01Z-00-DX1: extracting 979 patches...
+TCGA-A3-3365-01Z-00-DX1: Saved 979 patches in compressed format.
+TCGA-B0-4688-01Z-00-DX1: dimensions 127579x84881
+Detected tissue fraction in thumbnail: 0.33
+TCGA-B0-4688-01Z-00-DX1: extracting 13452 patches...
+TCGA-B0-4688-01Z-00-DX1: Saved 13452 patches in compressed format.
+TCGA-DV-5573-01Z-00-DX1: dimensions 73861x68723
+Detected tissue fraction in thumbnail: 0.45
+TCGA-DV-5573-01Z-00-DX1: extracting 8713 patches...
+TCGA-DV-5573-01Z-00-DX1: Saved 8713 patches in compressed format.
+TCGA-BP-5169-01Z-00-DX1: dimensions 122855x85520
+Detected tissue fraction in thumbnail: 0.64
+TCGA-BP-5169-01Z-00-DX1: extracting 25385 patches...
+TCGA-BP-5169-01Z-00-DX1: Saved 25385 patches in compressed format.
+TCGA-CJ-4876-01Z-00-DX1: dimensions 85655x82818
+Detected tissue fraction in thumbnail: 0.36
+TCGA-CJ-4876-01Z-00-DX1: extracting 9839 patches...
+TCGA-CJ-4876-01Z-00-DX1: Saved 9839 patches in compressed format.
+TCGA-B0-5690-01Z-00-DX1: dimensions 93046x74460
+Detected tissue fraction in thumbnail: 0.62
+TCGA-B0-5690-01Z-00-DX1: extracting 16305 patches...
+TCGA-B0-5690-01Z-00-DX1: Saved 16305 patches in compressed format.
+TCGA-CZ-4862-01Z-00-DX1: dimensions 50011x42379
+Detected tissue fraction in thumbnail: 0.32
+TCGA-CZ-4862-01Z-00-DX1: extracting 2510 patches...
+TCGA-CZ-4862-01Z-00-DX1: Saved 2510 patches in compressed format.
+TCGA-B0-4815-01Z-00-DX1: dimensions 76739x72042
+Detected tissue fraction in thumbnail: 0.45
+TCGA-B0-4815-01Z-00-DX1: extracting 9371 patches...
+TCGA-B0-4815-01Z-00-DX1: Saved 9371 patches in compressed format.
+TCGA-B0-4823-01Z-00-DX1: dimensions 100720x88469
+Detected tissue fraction in thumbnail: 0.53
+TCGA-B0-4823-01Z-00-DX1: extracting 17885 patches...
+TCGA-B0-4823-01Z-00-DX1: Saved 17885 patches in compressed format.
+TCGA-BP-4162-01Z-00-DX1: dimensions 109418x78477
+Detected tissue fraction in thumbnail: 0.49
+TCGA-BP-4162-01Z-00-DX1: extracting 15914 patches...
+TCGA-BP-4162-01Z-00-DX1: Saved 15914 patches in compressed format.
+TCGA-BP-5191-01Z-00-DX1: dimensions 78704x76878
+Detected tissue fraction in thumbnail: 0.50
+TCGA-BP-5191-01Z-00-DX1: extracting 11442 patches...
+TCGA-BP-5191-01Z-00-DX1: Saved 11442 patches in compressed format.
+TCGA-T7-A92I-01Z-00-DX1: dimensions 102912x164096
+Detected tissue fraction in thumbnail: 0.29
+TCGA-T7-A92I-01Z-00-DX1: extracting 18621 patches...
+TCGA-T7-A92I-01Z-00-DX1: Saved 18621 patches in compressed format.
+TCGA-BP-5189-01Z-00-DX1: dimensions 100780x71185
+Detected tissue fraction in thumbnail: 0.69
+TCGA-BP-5189-01Z-00-DX1: extracting 18672 patches...
+TCGA-BP-5189-01Z-00-DX1: Saved 18672 patches in compressed format.
+TCGA-B0-5100-01Z-00-DX1: dimensions 110313x71811
+Detected tissue fraction in thumbnail: 0.47
+TCGA-B0-5100-01Z-00-DX1: extracting 14077 patches...
+TCGA-B0-5100-01Z-00-DX1: Saved 14077 patches in compressed format.
+TCGA-BP-4971-01Z-00-DX1: dimensions 90222x71693
+Detected tissue fraction in thumbnail: 0.47
+TCGA-BP-4971-01Z-00-DX1: extracting 11662 patches...
+TCGA-BP-4971-01Z-00-DX1: Saved 11662 patches in compressed format.
+TCGA-CZ-4853-01Z-00-DX1: dimensions 42009x39591
+Detected tissue fraction in thumbnail: 0.33
+TCGA-CZ-4853-01Z-00-DX1: extracting 2094 patches...
+TCGA-CZ-4853-01Z-00-DX1: Saved 2094 patches in compressed format.
+TCGA-CZ-4858-01Z-00-DX1: dimensions 36007x28684
+Detected tissue fraction in thumbnail: 0.50
+TCGA-CZ-4858-01Z-00-DX1: extracting 1955 patches...
+TCGA-CZ-4858-01Z-00-DX1: Saved 1955 patches in compressed format.
+TCGA-CJ-4904-01Z-00-DX1: dimensions 101591x78731
+Detected tissue fraction in thumbnail: 0.49
+TCGA-CJ-4904-01Z-00-DX1: extracting 14980 patches...
+TCGA-CJ-4904-01Z-00-DX1: Saved 14980 patches in compressed format.
+TCGA-B8-A7U6-01Z-00-DX1: dimensions 138039x53257
+Detected tissue fraction in thumbnail: 0.37
+TCGA-B8-A7U6-01Z-00-DX1: extracting 10379 patches...
+TCGA-B8-A7U6-01Z-00-DX1: Saved 10379 patches in compressed format.
+TCGA-BP-5185-01Z-00-DX1: dimensions 124775x74382
+Detected tissue fraction in thumbnail: 0.52
+TCGA-BP-5185-01Z-00-DX1: extracting 18499 patches...
+TCGA-BP-5185-01Z-00-DX1: Saved 18499 patches in compressed format.
+TCGA-B0-5106-01Z-00-DX1: dimensions 108394x81939
+Detected tissue fraction in thumbnail: 0.54
+TCGA-B0-5106-01Z-00-DX1: extracting 18243 patches...
+TCGA-B0-5106-01Z-00-DX1: Saved 18243 patches in compressed format.
+TCGA-BP-4161-01Z-00-DX1: dimensions 117097x72198
+Detected tissue fraction in thumbnail: 0.27
+TCGA-BP-4161-01Z-00-DX1: extracting 8728 patches...
+TCGA-BP-4161-01Z-00-DX1: Saved 8728 patches in compressed format.
+TCGA-CJ-4869-01Z-00-DX1: dimensions 83663x84913
+Detected tissue fraction in thumbnail: 0.46
+TCGA-CJ-4869-01Z-00-DX1: extracting 12416 patches...
+TCGA-CJ-4869-01Z-00-DX1: Saved 12416 patches in compressed format.
+TCGA-B0-4945-01Z-00-DX1: dimensions 118946x88613
+Detected tissue fraction in thumbnail: 0.38
+TCGA-B0-4945-01Z-00-DX1: extracting 15256 patches...
+TCGA-B0-4945-01Z-00-DX1: Saved 15256 patches in compressed format.
+TCGA-CJ-4873-01Z-00-DX1: dimensions 109559x75642
+Detected tissue fraction in thumbnail: 0.37
+TCGA-CJ-4873-01Z-00-DX1: extracting 11676 patches...
+TCGA-CJ-4873-01Z-00-DX1: Saved 11676 patches in compressed format.
+TCGA-BP-4969-01Z-00-DX1: dimensions 107498x65357
+Detected tissue fraction in thumbnail: 0.37
+TCGA-BP-4969-01Z-00-DX1: extracting 9762 patches...
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/numpy/lib/_npyio_impl.py", line 796, in _savez
+    format.write_array(fid, val,
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+                       allow_pickle=allow_pickle,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+                       pickle_kwargs=pickle_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/numpy/lib/format.py", line 759, in write_array
+    fp.write(chunk.tobytes('C'))
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/zipfile/__init__.py", line 1252, in write
+    self._fileobj.write(data)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+OSError: [Errno 122] Disk quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/numpy/lib/_npyio_impl.py", line 795, in _savez
+    with zipf.open(fname, 'w', force_zip64=True) as fid:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/zipfile/__init__.py", line 1290, in close
+    self._fileobj.seek(self._zinfo.header_offset)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 122] Disk quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/zipfile/__init__.py", line 1997, in close
+    self.fp.seek(self.start_dir)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+OSError: [Errno 122] Disk quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/extract_patches512_npz.py", line 72, in <module>
+    np.savez_compressed(os.path.join(out_folder, f"{slide_id}_patches.npz"), patches=np.array(patches))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/numpy/lib/_npyio_impl.py", line 763, in savez_compressed
+    _savez(file, args, kwds, True, allow_pickle=allow_pickle)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/numpy/lib/_npyio_impl.py", line 800, in _savez
+    zipf.close()
+    ~~~~~~~~~~^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/zipfile/__init__.py", line 2002, in close
+    self._fpclose(fp)
+    ~~~~~~~~~~~~~^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/zipfile/__init__.py", line 2102, in _fpclose
+    fp.close()
+    ~~~~~~~~^^
+OSError: [Errno 122] Disk quota exceeded

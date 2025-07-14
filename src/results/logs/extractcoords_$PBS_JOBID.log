@@ -1,0 +1,7 @@
+Job started at Thu 10 Jul 11:24:22 BST 2025 on cx3-12-0.cx3.hpc.ic.ac.uk
+Saved patch coords for train to results/patch_coords_train.csv
+Saved patch coords for val to results/patch_coords_val.csv
+Done.
+Total script running time: 44.12 minutes (2647.2 seconds)
+Job ended at Thu 10 Jul 12:08:57 BST 2025
+Job started at Thu 10 Jul 16:28:06 BST 2025 on cx3-12-4.cx3.hpc.ic.ac.uk

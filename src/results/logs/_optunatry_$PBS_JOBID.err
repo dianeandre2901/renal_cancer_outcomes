@@ -1,0 +1,104 @@
+[I 2025-07-04 19:37:36,092] A new study created in memory with name: no-name-01262781-25c3-4ea1-afb6-603ea909544c
+/rds/general/user/dla24/home/thesis/src/io/optunatry.py:23: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  lr = trial.suggest_loguniform('lr', 1e-5, 5e-3)
+/rds/general/user/dla24/home/thesis/src/io/optunatry.py:28: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-3)
+[I 2025-07-04 21:25:09,565] Trial 0 finished with value: 0.5459795555555556 and parameters: {'lr': 0.00032106490382773295, 'batch_size': 64, 'n_patches': 75, 'area_um': 128, 'optimizer': 'Adam', 'weight_decay': 6.646058546247101e-05}. Best is trial 0 with value: 0.5459795555555556.
+/rds/general/user/dla24/home/thesis/src/io/optunatry.py:23: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  lr = trial.suggest_loguniform('lr', 1e-5, 5e-3)
+/rds/general/user/dla24/home/thesis/src/io/optunatry.py:28: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-3)
+[I 2025-07-04 23:38:09,848] Trial 1 finished with value: 0.4411215 and parameters: {'lr': 1.0713992637641376e-05, 'batch_size': 64, 'n_patches': 100, 'area_um': 256, 'optimizer': 'SGD', 'weight_decay': 0.0005166796419048198}. Best is trial 0 with value: 0.5459795555555556.
+/rds/general/user/dla24/home/thesis/src/io/optunatry.py:23: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  lr = trial.suggest_loguniform('lr', 1e-5, 5e-3)
+/rds/general/user/dla24/home/thesis/src/io/optunatry.py:28: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-3)
+=>> PBS: job killed: walltime 21682 exceeded limit 21600
+[I 2025-07-05 11:39:30,856] A new study created in memory with name: no-name-a4880c27-155a-4f0e-9c53-9ba104707442
+/rds/general/user/dla24/home/thesis/src/io/optunatry.py:28: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-3, log=True)
+[W 2025-07-05 11:39:30,862] Trial 0 failed with parameters: {'lr': 0.0005454739118258365, 'batch_size': 64, 'n_patches': 50, 'area_um': 384, 'optimizer': 'Adam'} because of the following error: TypeError("Trial.suggest_loguniform() got an unexpected keyword argument 'log'").
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/rds/general/user/dla24/home/thesis/src/io/optunatry.py", line 28, in objective
+    weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-3, log=True)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/_deprecated.py", line 115, in wrapper
+    return func(*args, **kwargs)
+TypeError: Trial.suggest_loguniform() got an unexpected keyword argument 'log'
+[W 2025-07-05 11:39:30,907] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/io/optunatry.py", line 90, in <module>
+    study.optimize(objective, n_trials=20)  # More trials = more thorough
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/study.py", line 489, in optimize
+    _optimize(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 64, in _optimize
+    _optimize_sequential(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 161, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 253, in _run_trial
+    raise func_err
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/rds/general/user/dla24/home/thesis/src/io/optunatry.py", line 28, in objective
+    weight_decay = trial.suggest_loguniform('weight_decay', 1e-6, 1e-3, log=True)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/_deprecated.py", line 115, in wrapper
+    return func(*args, **kwargs)
+TypeError: Trial.suggest_loguniform() got an unexpected keyword argument 'log'
+[I 2025-07-05 13:58:16,191] A new study created in memory with name: no-name-c145d7af-d9d4-4bff-b097-257319e6158a
+[I 2025-07-05 16:13:47,309] Trial 0 finished with value: 0.6080825 and parameters: {'lr': 0.0004658816486895865, 'batch_size': 16, 'n_patches': 100, 'area_um': 128, 'optimizer': 'SGD', 'weight_decay': 0.000183460225839313}. Best is trial 0 with value: 0.6080825.
+[I 2025-07-05 18:00:06,765] Trial 1 finished with value: 0.6056008888888889 and parameters: {'lr': 8.593623102407804e-05, 'batch_size': 32, 'n_patches': 75, 'area_um': 128, 'optimizer': 'Adam', 'weight_decay': 1.3520599945160356e-06}. Best is trial 0 with value: 0.6080825.
+=>> PBS: job killed: walltime 21611 exceeded limit 21600
+[I 2025-07-05 19:55:06,239] A new study created in memory with name: no-name-a1ae4a7a-a929-46be-9a15-58be217d4960
+[I 2025-07-05 21:13:01,972] Trial 0 finished with value: 0.5560009765625 and parameters: {'lr': 0.0017510264572901998, 'batch_size': 64, 'n_patches': 32, 'area_um': 256, 'optimizer': 'SGD', 'weight_decay': 0.0003744273879555874}. Best is trial 0 with value: 0.5560009765625.
+[I 2025-07-05 22:45:24,368] Trial 1 finished with value: 0.48699200000000004 and parameters: {'lr': 0.00010237777514435854, 'batch_size': 32, 'n_patches': 100, 'area_um': 256, 'optimizer': 'SGD', 'weight_decay': 5.91082473252674e-05}. Best is trial 0 with value: 0.5560009765625.
+[I 2025-07-06 00:05:14,047] Trial 2 finished with value: 0.56380859375 and parameters: {'lr': 0.0008759782158250405, 'batch_size': 16, 'n_patches': 32, 'area_um': 384, 'optimizer': 'SGD', 'weight_decay': 0.00026098119559915257}. Best is trial 2 with value: 0.56380859375.
+[I 2025-07-06 01:23:37,336] Trial 3 finished with value: 0.47456542968750004 and parameters: {'lr': 5.932174407197848e-05, 'batch_size': 32, 'n_patches': 32, 'area_um': 128, 'optimizer': 'SGD', 'weight_decay': 1.3483529061186958e-05}. Best is trial 2 with value: 0.56380859375.
+[I 2025-07-06 02:51:28,313] Trial 4 finished with value: 0.592104 and parameters: {'lr': 0.0010231973836942192, 'batch_size': 32, 'n_patches': 75, 'area_um': 256, 'optimizer': 'SGD', 'weight_decay': 2.392336887029764e-06}. Best is trial 4 with value: 0.592104.
+[I 2025-07-06 04:14:31,943] Trial 5 finished with value: 0.5599339999999999 and parameters: {'lr': 0.0018895515201242299, 'batch_size': 32, 'n_patches': 50, 'area_um': 256, 'optimizer': 'Adam', 'weight_decay': 0.0003342536860829305}. Best is trial 4 with value: 0.592104.
+[I 2025-07-06 05:36:10,607] Trial 6 finished with value: 0.621334 and parameters: {'lr': 0.0013780617510478117, 'batch_size': 16, 'n_patches': 50, 'area_um': 224, 'optimizer': 'SGD', 'weight_decay': 1.0054796485679051e-06}. Best is trial 6 with value: 0.621334.
+[I 2025-07-06 06:57:40,173] Trial 7 finished with value: 0.6009639999999999 and parameters: {'lr': 5.2391126056415286e-05, 'batch_size': 16, 'n_patches': 50, 'area_um': 224, 'optimizer': 'Adam', 'weight_decay': 0.0005189736768362954}. Best is trial 6 with value: 0.621334.
+[I 2025-07-06 08:23:03,993] Trial 8 finished with value: 0.594103111111111 and parameters: {'lr': 0.00021042591148850686, 'batch_size': 16, 'n_patches': 75, 'area_um': 256, 'optimizer': 'SGD', 'weight_decay': 2.0614771320700584e-05}. Best is trial 6 with value: 0.621334.
+[I 2025-07-06 09:53:42,012] Trial 9 finished with value: 0.5412315000000001 and parameters: {'lr': 1.4107877151815588e-05, 'batch_size': 64, 'n_patches': 100, 'area_um': 224, 'optimizer': 'Adam', 'weight_decay': 2.0130256599035004e-05}. Best is trial 6 with value: 0.621334.
+[I 2025-07-06 11:11:51,551] Trial 10 finished with value: 0.520029 and parameters: {'lr': 0.00481369598429788, 'batch_size': 16, 'n_patches': 50, 'area_um': 224, 'optimizer': 'Adam', 'weight_decay': 1.4308809229536174e-06}. Best is trial 6 with value: 0.621334.
+[I 2025-07-06 12:31:08,427] Trial 11 finished with value: 0.562812 and parameters: {'lr': 1.5051066298670123e-05, 'batch_size': 16, 'n_patches': 50, 'area_um': 224, 'optimizer': 'Adam', 'weight_decay': 4.278362108135535e-06}. Best is trial 6 with value: 0.621334.
+=>> PBS: job killed: walltime 64885 exceeded limit 64800
+[I 2025-07-06 16:51:18,105] A new study created in memory with name: no-name-24093f09-10cf-47aa-86cb-c4e4b4596e7d
+[I 2025-07-06 18:03:26,889] Trial 0 finished with value: 0.47127929687500003 and parameters: {'lr': 4.93183727582313e-05, 'batch_size': 16, 'n_patches': 32, 'area_um': 224, 'optimizer': 'SGD', 'weight_decay': 6.379783105407075e-05}. Best is trial 0 with value: 0.47127929687500003.
+[I 2025-07-06 19:39:44,612] Trial 1 finished with value: 0.6052154999999999 and parameters: {'lr': 0.0006565949911882628, 'batch_size': 16, 'n_patches': 100, 'area_um': 384, 'optimizer': 'Adam', 'weight_decay': 0.00018304906949545322}. Best is trial 1 with value: 0.6052154999999999.
+[I 2025-07-06 20:59:41,207] Trial 2 finished with value: 0.4614835555555556 and parameters: {'lr': 1.7743481466440128e-05, 'batch_size': 64, 'n_patches': 75, 'area_um': 224, 'optimizer': 'SGD', 'weight_decay': 1.5091778993398138e-06}. Best is trial 1 with value: 0.6052154999999999.
+[I 2025-07-06 22:14:11,969] Trial 3 finished with value: 0.6101719999999999 and parameters: {'lr': 0.003985093998674253, 'batch_size': 32, 'n_patches': 50, 'area_um': 224, 'optimizer': 'SGD', 'weight_decay': 1.3573244963950692e-05}. Best is trial 3 with value: 0.6101719999999999.
+[I 2025-07-06 23:32:44,746] Trial 4 finished with value: 0.5840675555555556 and parameters: {'lr': 0.0001576816819262729, 'batch_size': 32, 'n_patches': 75, 'area_um': 224, 'optimizer': 'Adam', 'weight_decay': 9.960794321123267e-06}. Best is trial 3 with value: 0.6101719999999999.
+[I 2025-07-07 00:45:40,191] Trial 5 finished with value: 0.489365234375 and parameters: {'lr': 4.097955426205463e-05, 'batch_size': 16, 'n_patches': 32, 'area_um': 384, 'optimizer': 'Adam', 'weight_decay': 1.0272624797466175e-06}. Best is trial 3 with value: 0.6101719999999999.
+[I 2025-07-07 02:02:25,297] Trial 6 finished with value: 0.483772 and parameters: {'lr': 1.0276098159719994e-05, 'batch_size': 32, 'n_patches': 50, 'area_um': 384, 'optimizer': 'Adam', 'weight_decay': 8.863225027891264e-06}. Best is trial 3 with value: 0.6101719999999999.
+[I 2025-07-07 03:19:27,824] Trial 7 finished with value: 0.5133182222222222 and parameters: {'lr': 8.531642295139614e-05, 'batch_size': 16, 'n_patches': 75, 'area_um': 128, 'optimizer': 'SGD', 'weight_decay': 0.0002056041580778669}. Best is trial 3 with value: 0.6101719999999999.
+[I 2025-07-07 04:34:15,291] Trial 8 finished with value: 0.53565 and parameters: {'lr': 0.00039068229463036844, 'batch_size': 32, 'n_patches': 50, 'area_um': 256, 'optimizer': 'SGD', 'weight_decay': 3.218240415594808e-06}. Best is trial 3 with value: 0.6101719999999999.
+[I 2025-07-07 05:57:13,036] Trial 9 finished with value: 0.6291317499999999 and parameters: {'lr': 5.9931573909958666e-05, 'batch_size': 64, 'n_patches': 100, 'area_um': 256, 'optimizer': 'Adam', 'weight_decay': 1.3886729385375233e-06}. Best is trial 9 with value: 0.6291317499999999.
+[I 2025-07-07 07:19:55,626] Trial 10 finished with value: 0.597982 and parameters: {'lr': 0.0010736352405843611, 'batch_size': 64, 'n_patches': 100, 'area_um': 256, 'optimizer': 'Adam', 'weight_decay': 0.0009451446956445676}. Best is trial 9 with value: 0.6291317499999999.
+[I 2025-07-07 08:34:58,916] Trial 11 finished with value: 0.602354 and parameters: {'lr': 0.003655120301424935, 'batch_size': 64, 'n_patches': 50, 'area_um': 256, 'optimizer': 'SGD', 'weight_decay': 1.1375760401736847e-05}. Best is trial 9 with value: 0.6291317499999999.
+=>> PBS: job killed: walltime 57664 exceeded limit 57600
+[I 2025-07-08 06:20:59,594] A new study created in memory with name: no-name-293fa606-3148-4039-ac0d-a099a356f828
+[W 2025-07-08 07:25:24,573] Trial 0 failed with parameters: {'lr': 1.544404796100696e-05, 'batch_size': 32, 'n_patches': 32, 'area_um': 224, 'optimizer': 'Adam', 'weight_decay': 3.32544795320855e-05, 'dropout': 0.45325548692819023} because of the following error: UnboundLocalError("local variable 'device' referenced before assignment").
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optunatry.py", line 170, in objective
+    model = MyEffNet(dropout).to(device)
+UnboundLocalError: local variable 'device' referenced before assignment
+[W 2025-07-08 07:25:24,591] Trial 0 failed with value None.
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optunatry.py", line 253, in <module>
+    study.optimize(objective, n_trials=15)  # increase n_trials for real search!
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/study.py", line 489, in optimize
+    _optimize(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 64, in _optimize
+    _optimize_sequential(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 161, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 253, in _run_trial
+    raise func_err
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+  File "/rds/general/user/dla24/home/thesis/src/scripts/optunatry.py", line 170, in objective
+    model = MyEffNet(dropout).to(device)
+UnboundLocalError: local variable 'device' referenced before assignment

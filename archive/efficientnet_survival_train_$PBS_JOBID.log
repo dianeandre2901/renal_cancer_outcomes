@@ -1,0 +1,40 @@
+Job started at Tue  1 Jul 20:36:21 BST 2025 on cx3-8-12.cx3.hpc.ic.ac.uk
+Job ended at Tue  1 Jul 20:37:17 BST 2025
+Job started at Tue  1 Jul 22:14:35 BST 2025 on cx3-8-12.cx3.hpc.ic.ac.uk
+Job ended at Tue  1 Jul 22:16:13 BST 2025
+Job started at Tue  1 Jul 22:45:33 BST 2025 on cx3-8-12.cx3.hpc.ic.ac.uk
+Job ended at Tue  1 Jul 23:12:38 BST 2025
+Job started at Wed  2 Jul 11:08:02 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+Epoch 01 | Train loss 2.8484 | Val loss nan | Patch CI 0.589 | Slide CI 0.594
+Epoch 02 | Train loss 2.8037 | Val loss nan | Patch CI 0.600 | Slide CI 0.609
+Epoch 03 | Train loss 2.7823 | Val loss nan | Patch CI 0.600 | Slide CI 0.603
+Epoch 04 | Train loss 2.7827 | Val loss nan | Patch CI 0.598 | Slide CI 0.609
+Epoch 05 | Train loss 2.7795 | Val loss nan | Patch CI 0.612 | Slide CI 0.611
+Epoch 06 | Train loss 2.7658 | Val loss nan | Patch CI 0.601 | Slide CI 0.609
+Epoch 07 | Train loss 2.7619 | Val loss nan | Patch CI 0.599 | Slide CI 0.613
+Epoch 08 | Train loss 2.7616 | Val loss nan | Patch CI 0.596 | Slide CI 0.603
+Epoch 09 | Train loss 2.7572 | Val loss nan | Patch CI 0.601 | Slide CI 0.611
+Epoch 10 | Train loss 2.7483 | Val loss nan | Patch CI 0.597 | Slide CI 0.611
+Job ended at Wed  2 Jul 18:08:55 BST 2025
+Job started at Wed  2 Jul 19:10:59 BST 2025 on cx3-11-6.cx3.hpc.ic.ac.uk
+Epoch 01 | Train loss 2.1535 | Val loss 0.1439 | Slide CI 0.333
+Epoch 02 | Train loss 2.0346 | Val loss 0.1425 | Slide CI 0.273
+Epoch 03 | Train loss 2.1899 | Val loss 0.1423 | Slide CI 0.286
+Epoch 04 | Train loss 1.9767 | Val loss 0.1417 | Slide CI 0.562
+Epoch 05 | Train loss 2.1006 | Val loss 0.1372 | Slide CI 0.455
+Epoch 06 | Train loss 2.3232 | Val loss 0.1385 | Slide CI 0.346
+Epoch 07 | Train loss 2.4143 | Val loss 0.1352 | Slide CI 0.385
+Epoch 08 | Train loss 2.0764 | Val loss 0.1360 | Slide CI 0.500
+Epoch 09 | Train loss 2.2029 | Val loss 0.1378 | Slide CI 0.417
+Epoch 10 | Train loss 2.2816 | Val loss 0.1462 | Slide CI 0.211
+Job ended at Wed  2 Jul 19:12:48 BST 2025
+Job started at Wed  2 Jul 19:22:08 BST 2025 on cx3-8-12.cx3.hpc.ic.ac.uk
+Job ended at Wed  2 Jul 19:22:27 BST 2025
+Job started at Wed  2 Jul 20:18:51 BST 2025 on cx3-11-5.cx3.hpc.ic.ac.uk
+Job ended at Wed  2 Jul 20:19:56 BST 2025
+Job started at Wed  2 Jul 20:28:41 BST 2025 on cx3-11-5.cx3.hpc.ic.ac.uk
+Job ended at Wed  2 Jul 20:29:58 BST 2025
+Job started at Wed  2 Jul 20:42:30 BST 2025 on cx3-11-7.cx3.hpc.ic.ac.uk
+Job ended at Wed  2 Jul 20:43:46 BST 2025
+Job started at Thu  3 Jul 00:11:44 BST 2025 on cx3-8-12.cx3.hpc.ic.ac.uk
+Job ended at Thu  3 Jul 00:11:54 BST 2025

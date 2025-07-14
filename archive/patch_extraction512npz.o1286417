@@ -1,0 +1,75 @@
+/rds/general/user/dla24/home/miniforge3/envs/r-env/bin/python
+Python 3.13.2
+TCGA-BP-5168-01Z-00-DX1: dimensions 115177x76883
+Detected tissue fraction in thumbnail: 0.27
+TCGA-BP-5168-01Z-00-DX1: extracting 9021 patches...
+TCGA-BP-5168-01Z-00-DX1: Saved 9021 patches in compressed format.
+TCGA-B2-4099-01Z-00-DX1: dimensions 164990x30418
+Detected tissue fraction in thumbnail: 0.22
+TCGA-B2-4099-01Z-00-DX1: extracting 4130 patches...
+TCGA-B2-4099-01Z-00-DX1: Saved 4130 patches in compressed format.
+TCGA-B0-4696-01Z-00-DX1: dimensions 88250x88366
+Detected tissue fraction in thumbnail: 0.46
+TCGA-B0-4696-01Z-00-DX1: extracting 13642 patches...
+TCGA-B0-4696-01Z-00-DX1: Saved 13642 patches in compressed format.
+TCGA-B0-5710-01Z-00-DX1: dimensions 116068x84537
+Detected tissue fraction in thumbnail: 0.52
+TCGA-B0-5710-01Z-00-DX1: extracting 19221 patches...
+TCGA-B0-5710-01Z-00-DX1: Saved 19221 patches in compressed format.
+TCGA-AK-3428-01Z-00-DX1: dimensions 53783x41374
+Detected tissue fraction in thumbnail: 0.27
+TCGA-AK-3428-01Z-00-DX1: extracting 2309 patches...
+TCGA-AK-3428-01Z-00-DX1: Saved 2309 patches in compressed format.
+TCGA-BP-5183-01Z-00-DX1: dimensions 65267x46693
+Detected tissue fraction in thumbnail: 0.39
+TCGA-BP-5183-01Z-00-DX1: extracting 4499 patches...
+TCGA-BP-5183-01Z-00-DX1: Saved 4499 patches in compressed format.
+TCGA-DV-5568-01Z-00-DX1: dimensions 97843x82100
+Detected tissue fraction in thumbnail: 0.41
+TCGA-DV-5568-01Z-00-DX1: extracting 12667 patches...
+TCGA-DV-5568-01Z-00-DX1: Saved 12667 patches in compressed format.
+TCGA-DV-A4VX-01Z-00-DX1: dimensions 108528x86904
+Detected tissue fraction in thumbnail: 0.46
+TCGA-DV-A4VX-01Z-00-DX1: extracting 16407 patches...
+TCGA-DV-A4VX-01Z-00-DX1: Saved 16407 patches in compressed format.
+TCGA-A3-3307-01Z-00-DX1: dimensions 47600x54354
+Detected tissue fraction in thumbnail: 0.37
+TCGA-A3-3307-01Z-00-DX1: extracting 3585 patches...
+TCGA-A3-3307-01Z-00-DX1: Saved 3585 patches in compressed format.
+TCGA-B0-4843-01Z-00-DX1: dimensions 90169x77222
+Detected tissue fraction in thumbnail: 0.46
+TCGA-B0-4843-01Z-00-DX1: extracting 12074 patches...
+TCGA-B0-4843-01Z-00-DX1: Saved 12074 patches in compressed format.
+TCGA-B8-4146-01Z-00-DX1: dimensions 94006x42259
+Detected tissue fraction in thumbnail: 0.48
+TCGA-B8-4146-01Z-00-DX1: extracting 7211 patches...
+TCGA-B8-4146-01Z-00-DX1: Saved 7211 patches in compressed format.
+TCGA-BP-4987-01Z-00-DX1: dimensions 95021x69441
+Detected tissue fraction in thumbnail: 0.49
+TCGA-BP-4987-01Z-00-DX1: extracting 12180 patches...
+TCGA-BP-4987-01Z-00-DX1: Saved 12180 patches in compressed format.
+TCGA-A3-3365-01Z-00-DX1: dimensions 26858x25731
+Detected tissue fraction in thumbnail: 0.37
+TCGA-A3-3365-01Z-00-DX1: extracting 979 patches...
+TCGA-A3-3365-01Z-00-DX1: Saved 979 patches in compressed format.
+TCGA-B0-4688-01Z-00-DX1: dimensions 127579x84881
+Detected tissue fraction in thumbnail: 0.33
+TCGA-B0-4688-01Z-00-DX1: extracting 13452 patches...
+TCGA-B0-4688-01Z-00-DX1: Saved 13452 patches in compressed format.
+TCGA-DV-5573-01Z-00-DX1: dimensions 73861x68723
+Detected tissue fraction in thumbnail: 0.45
+TCGA-DV-5573-01Z-00-DX1: extracting 8713 patches...
+TCGA-DV-5573-01Z-00-DX1: Saved 8713 patches in compressed format.
+TCGA-BP-5169-01Z-00-DX1: dimensions 122855x85520
+Detected tissue fraction in thumbnail: 0.64
+TCGA-BP-5169-01Z-00-DX1: extracting 25385 patches...
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/extract_patches512_npz.py", line 72, in <module>
+    np.savez_compressed(os.path.join(out_folder, f"{slide_id}_patches.npz"), patches=np.array(patches))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+object address  : 0x14de404b29c0
+object refcount : 3
+object type     : 0x5634692cfd00
+object type name: OSError
+object repr     : 
+lost sys.stderr

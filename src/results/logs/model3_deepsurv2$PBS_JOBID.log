@@ -1,0 +1,15 @@
+Job started at Fri 11 Jul 09:33:13 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job ended at Fri 11 Jul 09:34:45 BST 2025
+Job started at Fri 11 Jul 09:43:07 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job ended at Fri 11 Jul 09:52:33 BST 2025
+Job started at Fri 11 Jul 09:56:31 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job started at Fri 11 Jul 10:06:00 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job started at Sat 12 Jul 02:47:51 BST 2025 on cx3-6-26.cx3.hpc.ic.ac.uk
+Dataset loading started...
+tissueWSIPatchDataset loaded
+Model initialized. Beginning training...
+Job ended at Sat 12 Jul 16:34:34 BST 2025
+Job started at Mon 14 Jul 10:22:45 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Dataset loading started...
+tissueWSIPatchDataset loaded
+Model initialized. Beginning training...

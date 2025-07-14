@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_deepsurv.py", line 22, in <module>
+    from pycox.models.loss import CoxPHLoss
+ModuleNotFoundError: No module named 'pycox.models'
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_deepsurv.py", line 219, in <module>
+    train_losses, val_losses, val_cindices = train_deepsurv(
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_deepsurv.py", line 184, in train_deepsurv
+    for imgs, times, events, _ in train_loader:
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1515, in _next_data
+    return self._process_data(data, worker_id)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+    data.reraise()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/_utils.py", line 750, in reraise
+    raise exception
+TypeError: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_deepsurv.py", line 97, in __getitem__
+    patch = self.transform(patch)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
+    img = t(img)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 234, in __call__
+    return F.to_pil_image(pic, self.mode)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/transforms/functional.py", line 268, in to_pil_image
+    raise TypeError(f"pic should be Tensor or ndarray. Got {type(pic)}.")
+TypeError: pic should be Tensor or ndarray. Got <class 'PIL.Image.Image'>.
+
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_deepsurv.py", line 219, in <module>
+    train_losses, val_losses, val_cindices = train_deepsurv(
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_deepsurv.py", line 196, in train_deepsurv
+    val_loss, val_cidx = evaluate_cindex(model, val_loader, device)
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_deepsurv.py", line 172, in evaluate_cindex
+    cidx = concordance_index(-risks, times, events) if np.unique(times).size > 1 else float('nan')
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/lifelines/utils/concordance.py", line 91, in concordance_index
+    event_times, predicted_scores, event_observed = _preprocess_scoring_data(event_times, predicted_scores, event_observed)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/lifelines/utils/concordance.py", line 301, in _preprocess_scoring_data
+    raise ValueError("NaNs detected in inputs, please correct or drop.")
+ValueError: NaNs detected in inputs, please correct or drop.

@@ -1,0 +1,42 @@
+Job started at Mon 30 Jun 18:17:55 BST 2025 on cx3-11-5.cx3.hpc.ic.ac.uk
+Job ended at Mon 30 Jun 18:17:55 BST 2025
+Job started at Mon 30 Jun 20:49:25 BST 2025 on cx3-11-7.cx3.hpc.ic.ac.uk
+Epoch 1/5 | Train loss: 0.6304, acc: 0.661 | Val loss: 0.6118, acc: 0.672
+Epoch 2/5 | Train loss: 0.6059, acc: 0.681 | Val loss: 0.6135, acc: 0.666
+Epoch 3/5 | Train loss: 0.6006, acc: 0.687 | Val loss: 0.6034, acc: 0.674
+Epoch 4/5 | Train loss: 0.5963, acc: 0.687 | Val loss: 0.6045, acc: 0.670
+Job started at Tue  1 Jul 11:00:04 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+Epoch 1 started at Tue Jul  1 11:00:53 2025
+Epoch 1/10 | Train loss: 0.6396, acc: 0.654 | Val loss: 0.6154, acc: 0.677
+Epoch 2 started at Tue Jul  1 12:23:32 2025
+Epoch 2/10 | Train loss: 0.6144, acc: 0.678 | Val loss: 0.6161, acc: 0.672
+Epoch 3 started at Tue Jul  1 13:46:19 2025
+Epoch 3/10 | Train loss: 0.6093, acc: 0.678 | Val loss: 0.6159, acc: 0.673
+Epoch 4 started at Tue Jul  1 15:06:50 2025
+Epoch 4/10 | Train loss: 0.6056, acc: 0.681 | Val loss: 0.6067, acc: 0.675
+Epoch 5 started at Tue Jul  1 16:27:22 2025
+Job started at Tue  1 Jul 18:30:29 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+Epoch 1 started at Tue Jul  1 18:31:16 2025
+Job ended at Tue  1 Jul 18:31:45 BST 2025
+Job started at Tue  1 Jul 19:01:52 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+Epoch 1 started at Tue Jul  1 19:02:31 2025
+Epoch 1/10 | Train loss: 0.6319 | Val loss: 0.6468 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 2 started at Tue Jul  1 21:27:27 2025
+Epoch 2/10 | Train loss: 0.6168 | Val loss: 0.6464 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 3 started at Tue Jul  1 23:57:25 2025
+Epoch 3/10 | Train loss: 0.6094 | Val loss: 0.6404 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 4 started at Wed Jul  2 02:14:40 2025
+Epoch 4/10 | Train loss: 0.6059 | Val loss: 0.6434 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 5 started at Wed Jul  2 04:05:57 2025
+Epoch 5/10 | Train loss: 0.6054 | Val loss: 0.6506 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 6 started at Wed Jul  2 05:10:10 2025
+Epoch 6/10 | Train loss: 0.6006 | Val loss: 0.6458 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 7 started at Wed Jul  2 06:15:49 2025
+Epoch 7/10 | Train loss: 0.6033 | Val loss: 0.6500 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 8 started at Wed Jul  2 08:17:32 2025
+Epoch 8/10 | Train loss: 0.5982 | Val loss: 0.6450 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 9 started at Wed Jul  2 09:57:27 2025
+Epoch 9/10 | Train loss: 0.6007 | Val loss: 0.6466 | Train slide acc: 0.666 | Val slide acc: 0.697
+Epoch 10 started at Wed Jul  2 11:09:28 2025
+Epoch 10/10 | Train loss: 0.6002 | Val loss: 0.6456 | Train slide acc: 0.666 | Val slide acc: 0.697
+Job ended at Wed  2 Jul 12:30:46 BST 2025

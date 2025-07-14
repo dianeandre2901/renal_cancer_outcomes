@@ -1,0 +1,53 @@
+Job started at Sun  6 Jul 12:01:45 BST 2025 on cx3-12-2.cx3.hpc.ic.ac.uk
+Job ended at Sun  6 Jul 12:01:45 BST 2025
+Job started at Sun  6 Jul 12:04:02 BST 2025 on cx3-6-12.cx3.hpc.ic.ac.uk
+Epoch 01 | Train Loss 0.6749 | Val Loss 0.6781 | Train Acc 0.585 | Val Acc 0.559 | Patch AUC 0.489 | Slide Acc 0.667
+Patch-level Confusion Matrix:
+ [[735 265]
+ [396 104]]
+Epoch 02 | Train Loss 0.6469 | Val Loss 0.6669 | Train Acc 0.638 | Val Acc 0.591 | Patch AUC 0.518 | Slide Acc 0.633
+Patch-level Confusion Matrix:
+ [[778 222]
+ [392 108]]
+Epoch 03 | Train Loss 0.6303 | Val Loss 0.6578 | Train Acc 0.642 | Val Acc 0.596 | Patch AUC 0.544 | Slide Acc 0.633
+Patch-level Confusion Matrix:
+ [[794 206]
+ [400 100]]
+Epoch 04 | Train Loss 0.6126 | Val Loss 0.6441 | Train Acc 0.671 | Val Acc 0.621 | Patch AUC 0.584 | Slide Acc 0.633
+Patch-level Confusion Matrix:
+ [[802 198]
+ [371 129]]
+Epoch 05 | Train Loss 0.6010 | Val Loss 0.6491 | Train Acc 0.680 | Val Acc 0.616 | Patch AUC 0.592 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[747 253]
+ [323 177]]
+Epoch 06 | Train Loss 0.5864 | Val Loss 0.6424 | Train Acc 0.691 | Val Acc 0.619 | Patch AUC 0.593 | Slide Acc 0.633
+Patch-level Confusion Matrix:
+ [[786 214]
+ [357 143]]
+Epoch 07 | Train Loss 0.5810 | Val Loss 0.6497 | Train Acc 0.699 | Val Acc 0.621 | Patch AUC 0.595 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[751 249]
+ [320 180]]
+Epoch 08 | Train Loss 0.5622 | Val Loss 0.6543 | Train Acc 0.709 | Val Acc 0.625 | Patch AUC 0.593 | Slide Acc 0.667
+Patch-level Confusion Matrix:
+ [[753 247]
+ [316 184]]
+Epoch 09 | Train Loss 0.5548 | Val Loss 0.6483 | Train Acc 0.720 | Val Acc 0.639 | Patch AUC 0.608 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[757 243]
+ [298 202]]
+Epoch 10 | Train Loss 0.5570 | Val Loss 0.6564 | Train Acc 0.715 | Val Acc 0.617 | Patch AUC 0.606 | Slide Acc 0.700
+Patch-level Confusion Matrix:
+ [[723 277]
+ [298 202]]
+              precision    recall  f1-score   support
+
+       Alive       0.71      0.72      0.72      1000
+        Dead       0.42      0.40      0.41       500
+
+    accuracy                           0.62      1500
+   macro avg       0.56      0.56      0.56      1500
+weighted avg       0.61      0.62      0.61      1500
+
+Job ended at Sun  6 Jul 16:08:06 BST 2025

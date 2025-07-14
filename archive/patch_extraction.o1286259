@@ -1,0 +1,23 @@
+/rds/general/user/dla24/home/miniforge3/envs/r-env/bin/python
+Python 3.13.2
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/PIL/Image.py", line 2596, in save
+    save_handler(self, fp, filename)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/PIL/PngImagePlugin.py", line 1506, in _save
+    fp.flush()
+    ~~~~~~~~^^
+OSError: [Errno 122] Disk quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/extract_patches.py", line 63, in <module>
+    patch.save(os.path.join(out_folder, f"patch_{x}_{y}.png"))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rds/general/user/dla24/home/miniforge3/envs/r-env/lib/python3.13/site-packages/PIL/Image.py", line 2599, in save
+    fp.close()
+    ~~~~~~~~^^
+OSError: [Errno 122] Disk quota exceeded
+Exception ignored on flushing sys.stdout:
+OSError: [Errno 122] Disk quota exceeded

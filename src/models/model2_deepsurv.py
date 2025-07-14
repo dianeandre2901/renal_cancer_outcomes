@@ -149,7 +149,7 @@ with torch.no_grad():
         imgs, times, events = imgs.to(device), times.to(device), events.to(device)
         risk = model(imgs).squeeze(1)
         loss = criterion(risk, times, events)
-        # Check for NaN/Inf
+        # Checking for nan
         if (torch.isnan(times).any() or torch.isinf(times).any() or
             torch.isnan(events).any() or torch.isinf(events).any() or
             torch.isnan(risk).any() or torch.isinf(risk).any() or
@@ -162,7 +162,7 @@ with torch.no_grad():
         val_time.append(times.cpu().numpy())
         val_event.append(events.cpu().numpy())
         val_slide_ids.extend(slide_ids)
-# Compute mean val_loss ONLY over valid batches
+
 val_loss = val_loss / n_valid if n_valid > 0 else float('nan')
 if len(val_risk) > 0:
     val_risk = np.concatenate(val_risk)

@@ -30,7 +30,7 @@ def extract_patch_indices(slide_path, mpp, area_um=256, tissue_downsample=32, ti
                 coords.append((x, y, patch_px))
     return coords
 
-# CHANGE PATHS
+
 for split, path in [("train", "/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv"),
                     ("val",   "/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")]:
     df = pd.read_csv(path)
@@ -60,8 +60,8 @@ for split, path in [("train", "/rds/general/user/dla24/home/thesis/TGCA_dataset/
 print("Done.")
 end_time = time.time()
 elapsed = end_time - start_time
-# Print to stdout (it will appear in your .log)
+# Print to stdout
 print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)")
-# Save to a file for easy access
+# Save to file
 with open("results/plots/extractpatchescoords.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")

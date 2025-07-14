@@ -105,11 +105,11 @@ transform = transforms.Compose([
     transforms.RandomHorizontalFlip(),
     transforms.RandomVerticalFlip(),
     transforms.ColorJitter(0.2, 0.2, 0.2, 0.05),
-    transforms.Resize((224, 224)),   # All these work on PIL
-    transforms.ToTensor(),           # Converts PIL -> Tensor
+    transforms.Resize((224, 224)),   
+    transforms.ToTensor(),           
     transforms.Normalize(mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225])
 ])
-# --- Set patch cap to avoid OOM (set to None to use all) ---
+
 patch_cap = None # or None for all
 
 train_dataset = TissueWSIPatchDataset(df_train.head(20), area_um=128, out_px=224, transform=transform, max_patches_per_slide=patch_cap)
@@ -245,8 +245,7 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
 
     return train_losses, val_losses, train_accs, val_accs
 
-# ---- Training ----
-# Assume you already have train_loader, val_loader, model, optimizer, criterion set up
+#Training 
 
 train_losses, val_losses, train_accs, val_accs = train_model(
     model, train_loader, val_loader, criterion, optimizer,
@@ -254,7 +253,7 @@ train_losses, val_losses, train_accs, val_accs = train_model(
     early_stopping=True, patience=2, device=device
 )
 
-# ---- Evaluation & Confusion Matrix ----
+# Evaluation & CM
 all_preds, all_labels, all_probs = preds_labels(model, val_loader, device)
 cm = confusion_matrix(all_labels, all_preds)
 print("Validation Confusion Matrix:\n", cm)
@@ -269,7 +268,7 @@ plt.tight_layout()
 plt.savefig("results/plots/model3_val_confmat.png")
 plt.close()
 
-# ---- Training Progress Plot ----
+#  Training Progress Plot 
 def plot_training_progress(train_losses, val_losses, train_accs, val_accs):
     epochs = range(1, len(train_losses) + 1)
     fig, ax1 = plt.subplots(figsize=(8,6))
@@ -292,8 +291,8 @@ print("Saved all plots to results/plots/")
 
 end_time = time.time()
 elapsed = end_time - start_time
-# Print to stdout (it will appear in your .log)
+# Print to stdout
 print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)")
-# Save to a file for easy access
-with open("results/plots/model3_deepsurv_runtime.txt", "w") as f:
+# Save to file
+with open("results/plots/model3_binaryduplic_runtime.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")

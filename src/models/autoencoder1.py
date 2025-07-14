@@ -13,6 +13,8 @@ from torchvision import transforms
 from torchvision.models import resnet18, ResNet18_Weights
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader
+import matplotlib.pyplot as plt
+from torch.utils.data import DataLoader
 #
 start_time = time.time()
 
@@ -87,7 +89,7 @@ class MILTransformerModel(nn.Module):
                  dropout=0.1):
         super().__init__()
 
-        # --- CNN patch encoder (ResNet backbone) ---
+        # CNN patch encoder (ResNet backbone)
         if resnet_type == 'resnet18':
             self.feature_extractor = resnet18(weights=ResNet18_Weights.DEFAULT)
             in_features = 512
@@ -99,7 +101,7 @@ class MILTransformerModel(nn.Module):
 
         self.feature_extractor.fc = nn.Identity()  # Remove classification head
 
-        # --- Transformer MIL head ---
+        #  Transformer MIL head 
         self.mil_head = TransformerMIL(
             input_dim=in_features,
             embed_dim=embed_dim,
@@ -119,7 +121,7 @@ class MILTransformerModel(nn.Module):
         return out.squeeze(0).squeeze(-1)         # scalar prediction
 
 
-# ------------------- Autoencoder for 2D image patches -------------------
+# Autoencoder for patches
 class Autoencoder(nn.Module):
     def __init__(self, latent_dim=128):
         super().__init__()
@@ -150,19 +152,6 @@ class Autoencoder(nn.Module):
         return reconstructed
     
 
-
-end_time = time.time()
-elapsed = end_time - start_time
-# Print to stdout (it will appear in your .log)
-print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)")
-# Save to a file for easy access
-with open("results/plots/MIL+autoencoder_runtime.txt", "w") as f:
-    f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")
-
-
-import matplotlib.pyplot as plt
-from torch.utils.data import DataLoader
-
 # --- Simple Cox Loss ---
 def cox_loss(risk_scores, os_days, event, epsilon=1e-8):
     # sort by descending survival time
@@ -175,7 +164,7 @@ def cox_loss(risk_scores, os_days, event, epsilon=1e-8):
     loss = -torch.mean(uncensored_likelihood[event == 1])
     return loss
 
-# --- Training Config ---
+#  Training Config 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = MILTransformerModel().to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
@@ -237,3 +226,5 @@ print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} secon
 # Save file
 with open("results/plots/autoencoder1_runtime.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")
+
+

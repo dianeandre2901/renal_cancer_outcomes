@@ -31,13 +31,13 @@ import time
 # 
 start_time = time.time()
 
-# ---- Load slide metadata ----
+# Load
 df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
 df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
 df_train['slide_id'] = df_train['slide_id'].astype(str)
 df_train = df_train.drop(columns=["event"])
 df_val = df_val.drop(columns=["event"])
-# ---- Patient-level shuffle and split ----
+
 slide_ids = df_train['slide_id'].unique()
 
 class TissueWSIPatchDataset(Dataset):
@@ -100,7 +100,7 @@ class TissueWSIPatchDataset(Dataset):
             patch = transforms.ToTensor()(patch)
         return patch, label, slide_id
 
-# Stronger augmentation
+# augmentation
 transform = transforms.Compose([
     transforms.RandomHorizontalFlip(),
     transforms.RandomVerticalFlip(),
@@ -110,7 +110,7 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225])
 ])
 
-# --- Set patch cap to avoid OOM (set to None to use all) ---
+
 patch_cap = None # or None for all
 
 train_dataset = TissueWSIPatchDataset(df_train.head(2), area_um=128, out_px=224, transform=transform, max_patches_per_slide=patch_cap)
@@ -167,7 +167,7 @@ train_acc_list = []
 val_acc_list = []
 
 for epoch in range(epochs):
-    # --- TRAIN ---
+    # TRAIN 
     model.train()
     running_loss, correct, total = 0, 0, 0
     for imgs, labels, _ in train_loader:
@@ -185,7 +185,7 @@ for epoch in range(epochs):
     train_acc = correct / total if total > 0 else float("nan")
 
    
-    # --- VALIDATION: collect outputs for metrics ---
+    # VALIDATION
     model.eval()
     all_val_probs = []
     all_val_labels = []
@@ -222,7 +222,7 @@ for epoch in range(epochs):
     slide_acc = np.mean(np.array(slide_preds) == np.array(slide_trues)) if len(slide_trues) > 0 else float("nan")
     print(f"Slide-level accuracy: {slide_acc:.3f}")
 
-    # --- SLIDE-LEVEL CONFUSION MATRIX & PLOT (do it ONCE) ---
+    # --- slide level cm ---
     if len(slide_trues) > 0:
         slide_cm = confusion_matrix(slide_trues, slide_preds)
         fig, ax = plt.subplots(figsize=(5, 5))
@@ -264,8 +264,8 @@ for epoch in range(epochs):
 print("Done.")
 end_time = time.time()
 elapsed = end_time - start_time
-# Print to stdout (it will appear in your .log)
+# Print to stdout
 print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)")
-# Save to a file for easy access
+# Save to file
 with open("results/plots/model3_deepsurv_runtime.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")

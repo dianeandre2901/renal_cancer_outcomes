@@ -26,7 +26,7 @@ start_time = time.time()
 
 
 
-# ---- Load slide metadata ----
+# Load data
 df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
 df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
 df_train['slide_id'] = df_train['slide_id'].astype(str)
@@ -60,7 +60,7 @@ class PrecomputedPatchDataset(Dataset):
             patch = self.transform(patch)
         return patch, label, slide_id
 
-# Stronger augmentation
+#  augmentation
 transform = transforms.Compose([
     transforms.RandomHorizontalFlip(),
     transforms.RandomVerticalFlip(),
@@ -70,7 +70,6 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225])
 ])
 
-# --- Set patch cap to avoid OOM (set to None to use all) ---
 
 # Load and filter CSV
 train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
@@ -160,7 +159,7 @@ for epoch in range(epochs):
     train_loss = running_loss / total if total > 0 else float("nan")
     train_acc = correct / total if total > 0 else float("nan")
 
-    # --- VALIDATION & AGGREGATION (collect outputs for slide-level metrics) ---
+    # --- VALIDATION & AGGREGATION ---
     model.eval()
     val_loss, val_correct, val_total = 0, 0, 0
     all_val_probs = []
@@ -259,9 +258,9 @@ print(f"Total val patches:   {len(val_dataset)}")
 
 end_time = time.time()
 elapsed = end_time - start_time
-# Print to stdout (it will appear in your .log)
+# Print to stdout 
 print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)")
-# Save to a file for easy access
+# Save to file
 with open("results/plots/model4_30slides_runtime.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")
 

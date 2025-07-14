@@ -244,8 +244,8 @@ plt.close()
 print("Done.")
 end_time = time.time()
 elapsed = end_time - start_time
-# Print to stdout (it will appear in your .log)
+# Print to stdout 
 print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)")
-# Save to a file for easy access
+# Save to file
 with open("results/plots/model3_deepsurv_runtime.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")

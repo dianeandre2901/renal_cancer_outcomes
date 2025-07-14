@@ -10,7 +10,7 @@ import torch.nn as nn
 from PIL import Image
 from collections import defaultdict
 
-# ---- Load slide metadata ----
+# Load
 df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
 df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
 df_train['slide_id'] = df_train['slide_id'].astype(str)
@@ -25,7 +25,7 @@ class PrecomputedPatchDataset(Dataset):
            self.df = pd.read_csv(patch_csv)
            self.transform = transform 
         if max_patches_per_slide is not None:
-            # Optionally subsample to avoid OOM
+           
             self.df = self.df.groupby("slide_id").apply(
                 lambda g: g.sample(min(max_patches_per_slide, len(g)), random_state=42)
             ).reset_index(drop=True)
@@ -45,7 +45,7 @@ class PrecomputedPatchDataset(Dataset):
         return patch, label, slide_id
 
 
-# Stronger augmentation
+# augmentation
 transform = transforms.Compose([
     transforms.RandomHorizontalFlip(),
     transforms.RandomVerticalFlip(),
@@ -64,7 +64,7 @@ val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/res
 first_20_train = train_patches[train_patches['slide_id'].isin(train_patches['slide_id'].unique()[:20])]
 first_20_val   = val_patches[val_patches['slide_id'].isin(val_patches['slide_id'].unique()[:20])]
 patch_cap = 100 # or None for all
-# Update your Dataset class to accept a DataFrame (not just a path)
+
 train_dataset = PrecomputedPatchDataset(first_20_train, transform=transform, max_patches_per_slide=patch_cap)
 val_dataset   = PrecomputedPatchDataset(first_20_val, transform=transform, max_patches_per_slide=patch_cap)
 
@@ -85,11 +85,11 @@ def objective(trial):
     max_patches = trial.suggest_categorical('max_patches_per_slide', [50, 100, 200, None])
     area_um = trial.suggest_categorical('area_um', [128, 192, 224, 256, 384])
     # --- Data Preparation (as in your code, but parameterized) ---
-    # (replace the below DataFrame filtering as needed for your current setup)
+    
     train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
     val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
-    # Here use e.g. first 20 slides or full (for actual runs)
-    first_n = 20
+
+    first_n = 20 # first 20 patches ?
     train_df = train_patches[train_patches['slide_id'].isin(train_patches['slide_id'].unique()[:first_n])]
     val_df   = val_patches[val_patches['slide_id'].isin(val_patches['slide_id'].unique()[:first_n])]
     train_dataset = PrecomputedPatchDataset(train_df, transform=transform, max_patches_per_slide=max_patches)
@@ -123,7 +123,7 @@ def objective(trial):
     criterion = nn.CrossEntropyLoss(weight=class_weights)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
-    # --- Training loop (mini version, just 3 epochs for speed) ---
+    # Training loop mini version just 3 epochs for speed
     best_val_acc = 0
     for epoch in range(3):
         model.train()
@@ -171,7 +171,7 @@ def objective(trial):
         if slide_acc > best_val_acc:
             best_val_acc = slide_acc
 
-    # --- Report slide-level accuracy as the optimization metric ---
+    # Report slide-level accuracy as the optimization metric 
     print(f"[Optuna Trial] area_um={area_um} | batch_size={batch_size} | lr={lr:.2e} | wd={weight_decay:.2e} | dropout={dropout:.2f} | slide_acc={best_val_acc:.4f}")
     return best_val_acc
 

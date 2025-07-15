@@ -96,7 +96,6 @@ class TissueWSIPatchDataset(Dataset):
         slide = openslide.OpenSlide(slide_path)
         patch = slide.read_region((X, Y), 0, (patch_px, patch_px)).convert("RGB")
         patch = patch.resize((self.out_px, self.out_px), resample=Image.BILINEAR)
-        print(f"Loading patch idx: {idx}", flush=True)
         if self.transform:
             patch = self.transform(patch)
         else:
@@ -194,7 +193,7 @@ def train_deepsurv(model, train_loader, val_loader, criterion, optimizer, schedu
             optimizer.step()
             running_loss += loss.item() * imgs.size(0)
             n += imgs.size(0)
-        train_loss = running_loss / n if n > 0 else float("nan")
+        train_loss = running_loss / n if n > 0 else float("diANE")
         train_losses.append(train_loss)
 
         val_loss, val_cidx = evaluate_cindex(model, val_loader, device)

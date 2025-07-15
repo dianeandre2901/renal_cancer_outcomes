@@ -29,6 +29,10 @@ slide_info_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/v
 df_train = pd.merge(patch_coords_train, slide_info_train[["slide_id", "os_days", "event","age_at_diagnosis_years"]], on="slide_id", how="inner")
 df_val = pd.merge(patch_coords_val, slide_info_val[["slide_id", "os_days", "event","age_at_diagnosis_years"]], on="slide_id", how="inner")
 
+transform = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+])
 class PrecomputedPatchDataset(Dataset):
     def __init__(self, base_df, transform=None, max_patches=None):
         self.grouped = defaultdict(list)
@@ -152,7 +156,7 @@ class Autoencoder(nn.Module):
         return reconstructed
     
 
-# --- Simple Cox Loss ---
+# Simple Cox Loss 
 def cox_loss(risk_scores, os_days, event, epsilon=1e-8):
     # sort by descending survival time
     sorted_idx = torch.argsort(os_days, descending=True)
@@ -161,6 +165,8 @@ def cox_loss(risk_scores, os_days, event, epsilon=1e-8):
     hazard_ratio = torch.exp(risk_scores)
     log_risk = torch.log(torch.cumsum(hazard_ratio, dim=0) + epsilon)
     uncensored_likelihood = risk_scores - log_risk
+    if torch.sum(event) == 0:
+        return torch.tensor(0.0, requires_grad=True, device=risk_scores.device)
     loss = -torch.mean(uncensored_likelihood[event == 1])
     return loss
 
@@ -171,10 +177,14 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
 n_epochs = 10
 
 # Select first 10 unique slides instead of first 10 rows
-first_10_slides = df_train["slide_id"].unique()[:10]
-df_subset = df_train[df_train["slide_id"].isin(first_10_slides)]
-train_dataset = PrecomputedPatchDataset(df_subset, transform=None, max_patches=50)
-val_dataset = PrecomputedPatchDataset(df_subset, transform=None, max_patches=50)
+first_100_slides = df_train["slide_id"].unique()[:100]
+df_subset = df_train[df_train["slide_id"].isin(first_100_slides)]
+
+print("Training set events:", df_subset["event"].sum())
+
+train_dataset = PrecomputedPatchDataset(df_subset, transform=transform, max_patches=100)
+val_subset = df_val[df_val["slide_id"].isin(df_val["slide_id"].unique()[:50])]
+val_dataset = PrecomputedPatchDataset(val_subset, transform=transform, max_patches=50)
 train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=1)
 
@@ -187,6 +197,7 @@ for epoch in range(n_epochs):
         patches, os_days, event = patches.to(device), os_days.to(device), event.to(device)
         optimizer.zero_grad()
         risk_score = model(patches.squeeze(0).to(device))  # scalar
+        print("Epoch", epoch+1, "Risk score:", risk_score.item(), "Event:", event.item(), "os_days:", os_days.item())
         loss = cox_loss(risk_score.unsqueeze(0), os_days, event)
         loss.backward()
         optimizer.step()
@@ -226,5 +237,3 @@ print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} secon
 # Save file
 with open("results/plots/autoencoder1_runtime.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")
-
-

@@ -84,7 +84,10 @@ def objective(trial):
     batch_size = trial.suggest_categorical('batch_size', [8, 16, 32])
     max_patches = trial.suggest_categorical('max_patches_per_slide', [50, 100, 200, None])
     area_um = trial.suggest_categorical('area_um', [128, 192, 224, 256, 384])
-    # --- Data Preparation (as in your code, but parameterized) ---
+    # --- Print trial start info ---
+    print("="*50)
+    print(f"TRIAL {trial.number} | area_um={area_um} | batch_size={batch_size} | lr={lr:.2e} | wd={weight_decay:.2e} | dropout={dropout:.2f}")
+    # --- Data Preparation  ---
     
     train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
     val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
@@ -170,8 +173,14 @@ def objective(trial):
         slide_acc = np.mean(np.array(slide_preds) == np.array(slide_trues)) if len(slide_trues) > 0 else float("nan")
         if slide_acc > best_val_acc:
             best_val_acc = slide_acc
+        print(f"Epoch {epoch+1:02d} | Train Acc: {train_acc:.3f}, Val Acc: {val_acc:.3f}, Slide Acc: {slide_acc:.3f}")
+        maj_pred = np.mean(slide_preds)
+        if maj_pred < 0.05 or maj_pred > 0.95:
+            print("WARNING: Model is predicting almost all one class at slide level!")
 
     # Report slide-level accuracy as the optimization metric 
+    print("-"*40)
+    print(f"Trial {trial.number} done: Val Slide Acc = {slide_acc:.4f}")
     print(f"[Optuna Trial] area_um={area_um} | batch_size={batch_size} | lr={lr:.2e} | wd={weight_decay:.2e} | dropout={dropout:.2f} | slide_acc={best_val_acc:.4f}")
     return best_val_acc
 

@@ -1,7 +1,12 @@
 """
+Model 4: Patch-Level Classifier with tissue coordinates pre computed
 
-Model 4: 
+This model trains an EfficientNet-B0 to classify individual WSI patches as Alive/Dead,
+based on precomputed tissue coordinates. Patches inherit slide-level labels. At evaluation,
+patch predictions are aggregated (mean probability) to derive a slide-level prediction.
+Includes patch- and slide-level accuracy, confusion matrices, and loss/accuracy curves.
 """
+
 from matplotlib import pyplot as plt
 from seaborn import heatmap, set_style
 import openslide
@@ -76,12 +81,12 @@ train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/res
 val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
 
 # Take the first 20 unique slides (and all their patches)
-first_30_train = train_patches[train_patches['slide_id'].isin(train_patches['slide_id'].unique()[:30])]
-first_30_val   = val_patches[val_patches['slide_id'].isin(val_patches['slide_id'].unique()[:30])]
+first_60_train = train_patches[train_patches['slide_id'].isin(train_patches['slide_id'].unique()[:60])]
+first_60_val   = val_patches[val_patches['slide_id'].isin(val_patches['slide_id'].unique()[:60])]
 patch_cap = None # or None for all
-# Update your Dataset class to accept a DataFrame (not just a path)
-train_dataset = PrecomputedPatchDataset(first_30_train, transform=transform, max_patches_per_slide=patch_cap)
-val_dataset   = PrecomputedPatchDataset(first_30_val, transform=transform, max_patches_per_slide=patch_cap)
+
+train_dataset = PrecomputedPatchDataset(first_60_train, transform=transform, max_patches_per_slide=patch_cap)
+val_dataset   = PrecomputedPatchDataset(first_60_val, transform=transform, max_patches_per_slide=patch_cap)
 
 #train_dataset = PrecomputedPatchDataset("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv", transform=transform, max_patches_per_slide=patch_cap)
 #val_dataset   = PrecomputedPatchDataset("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv", transform=transform, max_patches_per_slide=patch_cap)

@@ -1,9 +1,9 @@
 #!/bin/bash
-#PBS -N model4_patchsizenone
+#PBS -N model4_60slides
 #PBS -l select=1:ncpus=4:mem=32gb
-#PBS -l walltime=18:00:00
-#PBS -o /rds/general/user/dla24/home/thesis/src/results/logs/model4_patchsizenone$PBS_JOBID.log
-#PBS -e /rds/general/user/dla24/home/thesis/src/results/logs/model4_patchsizenone$PBS_JOBID.err
+#PBS -l walltime=24:00:00
+#PBS -o /rds/general/user/dla24/home/thesis/src/results/logs/model4_60slides$PBS_JOBID.log
+#PBS -e /rds/general/user/dla24/home/thesis/src/results/logs/model4_60slides$PBS_JOBID.err
 
 
 

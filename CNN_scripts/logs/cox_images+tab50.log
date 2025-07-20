@@ -1,0 +1,16 @@
+Job started at Fri 18 Jul 23:57:10 BST 2025 on cx3-6-17.cx3.hpc.ic.ac.uk
+Train set: 50 slides, 69794 patches
+  Avg patches/slide: 1395.9, min: 84, max: 5032
+Val set: 59 slides, 72339 patches
+  Avg patches/slide: 1226.1, min: 110, max: 3609
+Job ended at Sat 19 Jul 05:06:15 BST 2025
+Job started at Sat 19 Jul 15:32:32 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Train set: 50 slides, 61902 patches
+  Avg patches/slide: 1238.0, min: 110, max: 3609
+Val set: 100 slides, 134512 patches
+  Avg patches/slide: 1345.1, min: 19, max: 5032
+Epoch 1/20 | Train Loss: 0.9158 | Val Loss: 1.6740 | Validation C-index: 0.5509
+Epoch 2/20 | Train Loss: 0.7368 | Val Loss: 2.4425 | Validation C-index: 0.5444
+Epoch 3/20 | Train Loss: 0.6669 | Val Loss: 1.9903 | Validation C-index: 0.5609
+Epoch 4/20 | Train Loss: 0.6180 | Val Loss: 2.2116 | Validation C-index: 0.5644
+Epoch 5/20 | Train Loss: 0.5757 | Val Loss: 2.3054 | Validation C-index: 0.5820

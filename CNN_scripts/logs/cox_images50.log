@@ -1,0 +1,19 @@
+Job started at Sat 19 Jul 07:55:00 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+Train set: 50 slides, 69794 patches
+  Avg patches/slide: 1395.9, min: 84, max: 5032
+Val set: 59 slides, 72339 patches
+  Avg patches/slide: 1226.1, min: 110, max: 3609
+Job ended at Sat 19 Jul 10:12:08 BST 2025
+Job started at Sun 20 Jul 02:52:28 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+Train set: 30 slides, 40577 patches
+  Avg patches/slide: 1352.6, min: 131, max: 3609
+Val set: 50 slides, 69794 patches
+  Avg patches/slide: 1395.9, min: 84, max: 5032
+Epoch 1/20 | Train Loss: 1.0175 | Val Loss: 1.6049 | Validation C-index: 0.6497
+Epoch 2/20 | Train Loss: 0.8257 | Val Loss: 1.9116 | Validation C-index: 0.6642
+Epoch 3/20 | Train Loss: 0.7417 | Val Loss: 1.9541 | Validation C-index: 0.6425
+Epoch 4/20 | Train Loss: 0.6863 | Val Loss: 2.0836 | Validation C-index: 0.6280
+Early stopping triggered after 4 epochs.
+Saved train/val loss & acc plot to results/plots/train_val_loss_cox_images50.png
+Total train patches: 40577
+Total val patches:   69794

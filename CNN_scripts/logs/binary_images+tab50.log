@@ -1,0 +1,107 @@
+Job started at Sat 19 Jul 17:24:51 BST 2025 on cx3-6-13.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [5.e-03 1.e+06]
+Train set: 2 slides, 200 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 2 slides, 200 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Job ended at Sat 19 Jul 17:26:26 BST 2025
+Job started at Sat 19 Jul 17:49:03 BST 2025 on cx3-6-15.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [5.e-03 1.e+06]
+Train set: 2 slides, 200 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 2 slides, 200 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Patch-level Confusion Matrix:
+[[ 3 97]
+ [14 86]]
+Slide-level accuracy: 0.500
+Saved confusion matrix as results/plots/CNN_binary_images+tab50_slide_confusion_matrix_epoch1.png/pdf
+Slide-level Confusion Matrix:
+[[0 1]
+ [0 1]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.00      0.00      0.00         1
+        Dead       0.50      1.00      0.67         1
+
+    accuracy                           0.50         2
+   macro avg       0.25      0.50      0.33         2
+weighted avg       0.25      0.50      0.33         2
+
+Job ended at Sat 19 Jul 17:51:32 BST 2025
+Job started at Sat 19 Jul 18:22:19 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [0.00076923 0.00142857]
+Train set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 40 slides, 3984 patches
+  Avg patches/slide: 99.6, min: 84, max: 100
+Patch-level Confusion Matrix:
+[[2218  266]
+ [1231  269]]
+Slide-level accuracy: 0.625
+Saved confusion matrix as results/plots/CNN_binary_images+tab50_slide_confusion_matrix_epoch1.png/pdf
+Slide-level Confusion Matrix:
+[[25  0]
+ [15  0]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.62      1.00      0.77        25
+        Dead       0.00      0.00      0.00        15
+
+    accuracy                           0.62        40
+   macro avg       0.31      0.50      0.38        40
+weighted avg       0.39      0.62      0.48        40
+
+Job ended at Sat 19 Jul 18:41:42 BST 2025
+Job started at Sat 19 Jul 19:43:35 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [0.0005 0.001 ]
+Train set: 30 slides, 3000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 40 slides, 3984 patches
+  Avg patches/slide: 99.6, min: 84, max: 100
+Patch-level Confusion Matrix:
+[[2210  274]
+ [1409   91]]
+Slide-level accuracy: 0.625
+Saved confusion matrix as results/plots/CNN_binary_images+tab50_slide_confusion_matrix_epoch1.png/pdf
+Slide-level Confusion Matrix:
+[[25  0]
+ [15  0]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.62      1.00      0.77        25
+        Dead       0.00      0.00      0.00        15
+
+    accuracy                           0.62        40
+   macro avg       0.31      0.50      0.38        40
+weighted avg       0.39      0.62      0.48        40
+
+Job ended at Sat 19 Jul 20:07:28 BST 2025
+Job started at Sat 19 Jul 20:51:16 BST 2025 on cx3-4-27.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [0.0005 0.001 ]
+Train set: 30 slides, 3000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 40 slides, 3984 patches
+  Avg patches/slide: 99.6, min: 84, max: 100
+Patch-level Confusion Matrix:
+[[ 225 2259]
+ [ 153 1347]]
+Slide-level accuracy: 0.375
+Saved confusion matrix as results/plots/CNN_binary_images+tab50_slide_confusion_matrix_epoch1.png/pdf
+Slide-level Confusion Matrix:
+[[ 0 25]
+ [ 0 15]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.00      0.00      0.00        25
+        Dead       0.38      1.00      0.55        15
+
+    accuracy                           0.38        40
+   macro avg       0.19      0.50      0.27        40
+weighted avg       0.14      0.38      0.20        40
+
+Job ended at Sat 19 Jul 21:06:22 BST 2025

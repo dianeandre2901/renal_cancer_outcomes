@@ -1,0 +1,24 @@
+Job started at Mon 21 Jul 06:12:11 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Using device: cpu
+Epoch 1 | Train Loss: 0.8546 | Train Acc: 0.6714 | Val Loss: 1.0421 | Val Acc: 0.6400
+Epoch 2 | Train Loss: 0.6947 | Train Acc: 0.6571 | Val Loss: 0.7681 | Val Acc: 0.3600
+Epoch 3 | Train Loss: 0.8541 | Train Acc: 0.5857 | Val Loss: 0.6529 | Val Acc: 0.6400
+Epoch 4 | Train Loss: 0.7026 | Train Acc: 0.6429 | Val Loss: 0.6627 | Val Acc: 0.6400
+Epoch 5 | Train Loss: 0.6708 | Train Acc: 0.7000 | Val Loss: 0.6536 | Val Acc: 0.6400
+Epoch 6 | Train Loss: 0.6364 | Train Acc: 0.6714 | Val Loss: 0.7076 | Val Acc: 0.3600
+Epoch 7 | Train Loss: 0.6695 | Train Acc: 0.6714 | Val Loss: 0.6643 | Val Acc: 0.6400
+Epoch 8 | Train Loss: 0.6374 | Train Acc: 0.7000 | Val Loss: 0.6609 | Val Acc: 0.6400
+Epoch 9 | Train Loss: 0.6732 | Train Acc: 0.6571 | Val Loss: 0.6847 | Val Acc: 0.6400
+Epoch 10 | Train Loss: 0.6414 | Train Acc: 0.6714 | Val Loss: 0.6613 | Val Acc: 0.6400
+Epoch 11 | Train Loss: 0.6561 | Train Acc: 0.6429 | Val Loss: 0.6535 | Val Acc: 0.6400
+Epoch 12 | Train Loss: 0.6101 | Train Acc: 0.7143 | Val Loss: 0.7315 | Val Acc: 0.6400
+Epoch 13 | Train Loss: 0.6507 | Train Acc: 0.6857 | Val Loss: 0.6864 | Val Acc: 0.6400
+Epoch 14 | Train Loss: 0.6574 | Train Acc: 0.7000 | Val Loss: 0.6519 | Val Acc: 0.6400
+Epoch 15 | Train Loss: 0.6313 | Train Acc: 0.6571 | Val Loss: 0.6633 | Val Acc: 0.6400
+Epoch 16 | Train Loss: 0.6161 | Train Acc: 0.7000 | Val Loss: 0.6549 | Val Acc: 0.6400
+Epoch 17 | Train Loss: 0.6526 | Train Acc: 0.6429 | Val Loss: 0.6823 | Val Acc: 0.6400
+Epoch 18 | Train Loss: 0.6627 | Train Acc: 0.6286 | Val Loss: 0.6900 | Val Acc: 0.6400
+Epoch 19 | Train Loss: 0.6391 | Train Acc: 0.7000 | Val Loss: 0.6499 | Val Acc: 0.6400
+Epoch 20 | Train Loss: 0.6113 | Train Acc: 0.7000 | Val Loss: 0.6920 | Val Acc: 0.6400
+Total script running time: 61.28 minutes (3676.9 seconds)
+Job ended at Mon 21 Jul 07:15:24 BST 2025

@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/CNN+MIL_binary.py", line 193, in <module>
+    loss = criterion(logits.unsqueeze(0), vital_status.unsqueeze(0))
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 821, in forward
+    return F.binary_cross_entropy_with_logits(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/functional.py", line 3639, in binary_cross_entropy_with_logits
+    raise ValueError(
+ValueError: Target size (torch.Size([1, 1])) must be the same as input size (torch.Size([1]))
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/CNN+MIL_binary.py", line 211, in <module>
+    loss = criterion(logits.unsqueeze(0), vital_status.unsqueeze(0))
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 821, in forward
+    return F.binary_cross_entropy_with_logits(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/functional.py", line 3639, in binary_cross_entropy_with_logits
+    raise ValueError(
+ValueError: Target size (torch.Size([1, 1])) must be the same as input size (torch.Size([1]))
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/CNN+MIL_binary.py", line 211, in <module>
+    loss = criterion(logits.unsqueeze(0), vital_status.unsqueeze(0))
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 821, in forward
+    return F.binary_cross_entropy_with_logits(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/functional.py", line 3639, in binary_cross_entropy_with_logits
+    raise ValueError(
+ValueError: Target size (torch.Size([1, 1])) must be the same as input size (torch.Size([1]))
+=>> PBS: job killed: walltime 64816 exceeded limit 64800
+/rds/general/user/dla24/home/thesis/MIl/MIL_binary20.py:51: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  self.df = self.df.groupby("slide_id").apply(
+/rds/general/user/dla24/home/thesis/MIl/MIL_binary20.py:51: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  self.df = self.df.groupby("slide_id").apply(

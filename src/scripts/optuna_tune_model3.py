@@ -191,12 +191,11 @@ def objective(trial):
         slide_pred_classes = {sid: int(np.mean(probs) > 0.5) for sid, probs in slide_probs.items()}
         slide_true_labels = {sid: slide_labels[sid] for sid in slide_probs}
         slide_acc = np.mean([slide_pred_classes[sid] == slide_true_labels[sid] for sid in slide_probs])
-        print(f"Epoch {epoch+1:02d} | Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Train Acc: {train_acc:.3f}, Val Acc: {val_acc:.3f}, Slide Acc: {slide_acc:.3f}, Patch AUC: {auc_patch:.3f}")
-        print("Patch Confusion Matrix:\n", patch_cm)
-        # print warning if always one class
-        maj_pred = np.mean(patch_preds)
+        slide_preds = list(slide_pred_classes.values())
+        print(f"Epoch {epoch+1:02d} | Train Acc: {train_acc:.3f}, Val Acc: {val_acc:.3f}, Slide Acc: {slide_acc:.3f}")
+        maj_pred = np.mean(slide_preds)
         if maj_pred < 0.05 or maj_pred > 0.95:
-            print("WARNING: Model is predicting almost all one class at patch level!")
+            print("WARNING: Model is predicting almost all one class at slide level!")
         
         if val_acc > best_val_acc:
             best_val_acc = val_acc

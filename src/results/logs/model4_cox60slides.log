@@ -1,0 +1,12 @@
+Job started at Sat 19 Jul 07:37:25 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+Train set: 60 slides, 82981 patches
+  Avg patches/slide: 1383.0, min: 58, max: 5032
+Val set: 30 slides, 40577 patches
+  Avg patches/slide: 1352.6, min: 131, max: 3609
+Epoch 1/20 | Train Loss: 1.8098 | Val Loss: 2.1909 | Validation C-index: 0.5583
+Epoch 2/20 | Train Loss: 1.5351 | Val Loss: 2.4675 | Validation C-index: 0.5625
+Epoch 3/20 | Train Loss: 1.4182 | Val Loss: 2.8660 | Validation C-index: 0.5556
+Epoch 4/20 | Train Loss: 1.3314 | Val Loss: 2.6581 | Validation C-index: 0.5776
+Epoch 5/20 | Train Loss: 1.2656 | Val Loss: 2.7269 | Validation C-index: 0.6486
+Epoch 6/20 | Train Loss: 1.2119 | Val Loss: 2.9614 | Validation C-index: 0.6460
+Epoch 7/20 | Train Loss: 1.1662 | Val Loss: 2.9880 | Validation C-index: 0.6531

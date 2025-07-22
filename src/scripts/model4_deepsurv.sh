@@ -1,9 +1,9 @@
 #!/bin/bash
-#PBS -N model4_deepsuvr_20
+#PBS -N model4_cox20slides
 #PBS -l select=1:ncpus=4:mem=32gb
 #PBS -l walltime=18:00:00
-#PBS -o /rds/general/user/dla24/home/thesis/src/results/logs/model4_deepsuvr_20$PBS_JOBID.log
-#PBS -e /rds/general/user/dla24/home/thesis/src/results/logs/model4_deepsuvr_20$PBS_JOBID.err
+#PBS -o /rds/general/user/dla24/home/thesis/src/results/logs/model4_cox20slides.log
+#PBS -e /rds/general/user/dla24/home/thesis/src/results/logs/model4_cox20slidess.err
 
 
 

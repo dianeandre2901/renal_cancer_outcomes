@@ -1,0 +1,252 @@
+Job started at Thu 17 Jul 19:15:52 BST 2025 on cx3-11-7.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [0.00026028 0.00047619]
+Train set: 60 slides, 5942 patches
+  Avg patches/slide: 99.0, min: 58, max: 100
+Val set: 30 slides, 3000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Patch-level Confusion Matrix:
+[[1386  614]
+ [ 462  538]]
+Slide-level accuracy: 0.767
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch1.png/pdf
+Slide-level Confusion Matrix:
+[[16  4]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.84      0.80      0.82        20
+        Dead       0.64      0.70      0.67        10
+
+    accuracy                           0.77        30
+   macro avg       0.74      0.75      0.74        30
+weighted avg       0.77      0.77      0.77        30
+
+Epoch 1/10 | Train Loss: 0.6735 | Train Acc: 0.582 | Val Loss: 0.6528 | Val Acc: 0.641 | Slide Acc: 0.767
+Patch-level Confusion Matrix:
+[[1431  569]
+ [ 430  570]]
+Slide-level accuracy: 0.767
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch2.png/pdf
+Slide-level Confusion Matrix:
+[[16  4]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.84      0.80      0.82        20
+        Dead       0.64      0.70      0.67        10
+
+    accuracy                           0.77        30
+   macro avg       0.74      0.75      0.74        30
+weighted avg       0.77      0.77      0.77        30
+
+Epoch 2/10 | Train Loss: 0.6142 | Train Acc: 0.655 | Val Loss: 0.7933 | Val Acc: 0.667 | Slide Acc: 0.767
+Patch-level Confusion Matrix:
+[[1412  588]
+ [ 397  603]]
+Slide-level accuracy: 0.767
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch3.png/pdf
+Slide-level Confusion Matrix:
+[[16  4]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.84      0.80      0.82        20
+        Dead       0.64      0.70      0.67        10
+
+    accuracy                           0.77        30
+   macro avg       0.74      0.75      0.74        30
+weighted avg       0.77      0.77      0.77        30
+
+Epoch 3/10 | Train Loss: 0.5551 | Train Acc: 0.711 | Val Loss: 0.6439 | Val Acc: 0.672 | Slide Acc: 0.767
+Patch-level Confusion Matrix:
+[[1359  641]
+ [ 372  628]]
+Slide-level accuracy: 0.700
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch4.png/pdf
+Slide-level Confusion Matrix:
+[[14  6]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.82      0.70      0.76        20
+        Dead       0.54      0.70      0.61        10
+
+    accuracy                           0.70        30
+   macro avg       0.68      0.70      0.68        30
+weighted avg       0.73      0.70      0.71        30
+
+Epoch 4/10 | Train Loss: 0.4922 | Train Acc: 0.755 | Val Loss: 0.7006 | Val Acc: 0.662 | Slide Acc: 0.700
+Patch-level Confusion Matrix:
+[[1387  613]
+ [ 429  571]]
+Slide-level accuracy: 0.700
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch5.png/pdf
+Slide-level Confusion Matrix:
+[[15  5]
+ [ 4  6]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.79      0.75      0.77        20
+        Dead       0.55      0.60      0.57        10
+
+    accuracy                           0.70        30
+   macro avg       0.67      0.68      0.67        30
+weighted avg       0.71      0.70      0.70        30
+
+Epoch 5/10 | Train Loss: 0.4481 | Train Acc: 0.783 | Val Loss: 0.7571 | Val Acc: 0.653 | Slide Acc: 0.700
+Early stopping triggered after 5 epochs.
+Saved train/val loss & acc plot to results/plots/model4_train_val_loss_acc_60slides_aftertuning.png/pdf
+Total train patches: 5942
+Total val patches:   3000
+Total script running time: 83.81 minutes (5028.6 seconds)
+Job ended at Thu 17 Jul 20:40:57 BST 2025
+Job started at Sat 19 Jul 07:35:19 BST 2025 on cx3-11-7.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [0.00026028 0.00047619]
+Train set: 60 slides, 5942 patches
+  Avg patches/slide: 99.0, min: 58, max: 100
+Val set: 30 slides, 3000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Patch-level Confusion Matrix:
+[[1349  651]
+ [ 450  550]]
+Slide-level accuracy: 0.733
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch1.png/pdf
+Slide-level Confusion Matrix:
+[[15  5]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.83      0.75      0.79        20
+        Dead       0.58      0.70      0.64        10
+
+    accuracy                           0.73        30
+   macro avg       0.71      0.72      0.71        30
+weighted avg       0.75      0.73      0.74        30
+
+Epoch 1/10 | Train Loss: 0.6789 | Train Acc: 0.573 | Val Loss: 0.8325 | Val Acc: 0.633 | Slide Acc: 0.733
+Patch-level Confusion Matrix:
+[[1363  637]
+ [ 422  578]]
+Slide-level accuracy: 0.700
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch2.png/pdf
+Slide-level Confusion Matrix:
+[[14  6]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.82      0.70      0.76        20
+        Dead       0.54      0.70      0.61        10
+
+    accuracy                           0.70        30
+   macro avg       0.68      0.70      0.68        30
+weighted avg       0.73      0.70      0.71        30
+
+Epoch 2/10 | Train Loss: 0.6375 | Train Acc: 0.637 | Val Loss: 0.7285 | Val Acc: 0.647 | Slide Acc: 0.700
+Patch-level Confusion Matrix:
+[[1427  573]
+ [ 420  580]]
+Slide-level accuracy: 0.733
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch3.png/pdf
+Slide-level Confusion Matrix:
+[[15  5]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.83      0.75      0.79        20
+        Dead       0.58      0.70      0.64        10
+
+    accuracy                           0.73        30
+   macro avg       0.71      0.72      0.71        30
+weighted avg       0.75      0.73      0.74        30
+
+Epoch 3/10 | Train Loss: 0.6137 | Train Acc: 0.656 | Val Loss: 0.6311 | Val Acc: 0.669 | Slide Acc: 0.733
+Patch-level Confusion Matrix:
+[[1389  611]
+ [ 431  569]]
+Slide-level accuracy: 0.733
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch4.png/pdf
+Slide-level Confusion Matrix:
+[[15  5]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.83      0.75      0.79        20
+        Dead       0.58      0.70      0.64        10
+
+    accuracy                           0.73        30
+   macro avg       0.71      0.72      0.71        30
+weighted avg       0.75      0.73      0.74        30
+
+Epoch 4/10 | Train Loss: 0.5714 | Train Acc: 0.697 | Val Loss: 0.6488 | Val Acc: 0.653 | Slide Acc: 0.733
+Patch-level Confusion Matrix:
+[[1491  509]
+ [ 447  553]]
+Slide-level accuracy: 0.767
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch5.png/pdf
+Slide-level Confusion Matrix:
+[[16  4]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.84      0.80      0.82        20
+        Dead       0.64      0.70      0.67        10
+
+    accuracy                           0.77        30
+   macro avg       0.74      0.75      0.74        30
+weighted avg       0.77      0.77      0.77        30
+
+Epoch 5/10 | Train Loss: 0.5428 | Train Acc: 0.721 | Val Loss: 0.7088 | Val Acc: 0.681 | Slide Acc: 0.767
+Patch-level Confusion Matrix:
+[[1397  603]
+ [ 382  618]]
+Slide-level accuracy: 0.733
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch6.png/pdf
+Slide-level Confusion Matrix:
+[[15  5]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.83      0.75      0.79        20
+        Dead       0.58      0.70      0.64        10
+
+    accuracy                           0.73        30
+   macro avg       0.71      0.72      0.71        30
+weighted avg       0.75      0.73      0.74        30
+
+Epoch 6/10 | Train Loss: 0.5193 | Train Acc: 0.739 | Val Loss: 0.7179 | Val Acc: 0.672 | Slide Acc: 0.733
+Patch-level Confusion Matrix:
+[[1303  697]
+ [ 375  625]]
+Slide-level accuracy: 0.700
+Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch7.png/pdf
+Slide-level Confusion Matrix:
+[[14  6]
+ [ 3  7]]
+Slide-level classification report:
+              precision    recall  f1-score   support
+
+       Alive       0.82      0.70      0.76        20
+        Dead       0.54      0.70      0.61        10
+
+    accuracy                           0.70        30
+   macro avg       0.68      0.70      0.68        30
+weighted avg       0.73      0.70      0.71        30
+
+Epoch 7/10 | Train Loss: 0.5041 | Train Acc: 0.740 | Val Loss: 0.7123 | Val Acc: 0.643 | Slide Acc: 0.700
+Early stopping triggered after 7 epochs.
+Saved train/val loss & acc plot to results/plots/model4_train_val_loss_acc_60slides_aftertuning.png/pdf
+Total train patches: 5942
+Total val patches:   3000
+Total script running time: 108.82 minutes (6528.9 seconds)
+Job ended at Sat 19 Jul 09:25:44 BST 2025

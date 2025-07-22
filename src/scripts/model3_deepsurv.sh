@@ -2,8 +2,8 @@
 #PBS -N model3_deepsurv_retrieved
 #PBS -l select=1:ncpus=4:mem=32gb
 #PBS -l walltime=24:00:00
-#PBS -o /rds/general/user/dla24/home/thesis/src/results/logs/model3_deepsurv_retrieved$PBS_JOBID.log
-#PBS -e /rds/general/user/dla24/home/thesis/src/results/logs/model3_deepsurv_retrieved2$PBS_JOBID.err
+#PBS -o /rds/general/user/dla24/home/thesis/src/results/logs/model3_deepsurv_retrieved2.log
+#PBS -e /rds/general/user/dla24/home/thesis/src/results/logs/model3_deepsurv_retrieved2.err
 
 
 

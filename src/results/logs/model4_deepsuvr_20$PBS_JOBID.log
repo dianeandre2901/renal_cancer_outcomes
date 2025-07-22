@@ -1,0 +1,51 @@
+Job started at Wed 16 Jul 13:34:52 BST 2025 on cx3-6-21.cx3.hpc.ic.ac.uk
+Train set: 20 slides, 31446 patches
+  Avg patches/slide: 1572.3, min: 169, max: 2830
+Val set: 20 slides, 25726 patches
+  Avg patches/slide: 1286.3, min: 131, max: 3609
+Epoch 1/10 | Train Loss: nan | Val Loss: nan | Validation C-index: 0.3182
+Epoch 2/10 | Train Loss: nan | Val Loss: nan | Validation C-index: 0.1780
+Epoch 3/10 | Train Loss: nan | Val Loss: nan | Validation C-index: 0.2625
+Early stopping triggered after 3 epochs.
+Saved train/val loss & acc plot to results/plots/model4_train_val_loss_acc_deepsurv_20.png/pdf
+Total train patches: 31446
+Total val patches:   25726
+Validation C-index: 0.2763
+Total script running time: 800.63 minutes (48037.7 seconds)
+Job ended at Thu 17 Jul 02:57:31 BST 2025
+Job started at Thu 17 Jul 11:36:00 BST 2025 on cx3-6-17.cx3.hpc.ic.ac.uk
+Train set: 20 slides, 31446 patches
+  Avg patches/slide: 1572.3, min: 169, max: 2830
+Val set: 20 slides, 25726 patches
+  Avg patches/slide: 1286.3, min: 131, max: 3609
+Job ended at Thu 17 Jul 11:39:00 BST 2025
+Job started at Thu 17 Jul 12:32:24 BST 2025 on cx3-4-28.cx3.hpc.ic.ac.uk
+Train set: 20 slides, 31446 patches
+  Avg patches/slide: 1572.3, min: 169, max: 2830
+Val set: 20 slides, 25726 patches
+  Avg patches/slide: 1286.3, min: 131, max: 3609
+Epoch 1/10 | Train Loss: 0.6494 | Val Loss: 1.3344 | Validation C-index: 0.3182
+Epoch 2/10 | Train Loss: 0.6443 | Val Loss: 1.3285 | Validation C-index: 0.2283
+Epoch 3/10 | Train Loss: 0.6387 | Val Loss: 1.3414 | Validation C-index: 0.3088
+Early stopping triggered after 3 epochs.
+Saved train/val loss & acc plot to results/plots/model4_train_val_loss_acc_deepsurv_20.png/pdf
+Total train patches: 31446
+Total val patches:   25726
+Job started at Thu 17 Jul 20:18:47 BST 2025 on cx3-4-28.cx3.hpc.ic.ac.uk
+Train set: 20 slides, 31446 patches
+  Avg patches/slide: 1572.3, min: 169, max: 2830
+Val set: 20 slides, 25726 patches
+  Avg patches/slide: 1286.3, min: 131, max: 3609
+Epoch 1/10 | Train Loss: 0.8220 | Val Loss: 1.7767 | Validation C-index: 0.3864
+Epoch 2/10 | Train Loss: 0.5857 | Val Loss: 2.0797 | Validation C-index: 0.4186
+Epoch 3/10 | Train Loss: 0.5236 | Val Loss: 2.4250 | Validation C-index: 0.5476
+Epoch 4/10 | Train Loss: 0.4723 | Val Loss: 2.4924 | Validation C-index: 0.4043
+Epoch 5/10 | Train Loss: 0.4487 | Val Loss: 2.2361 | Validation C-index: 0.5500
+Epoch 6/10 | Train Loss: 0.4092 | Val Loss: 2.2175 | Validation C-index: 0.4750
+Epoch 7/10 | Train Loss: 0.3857 | Val Loss: 2.5598 | Validation C-index: 0.5000
+Early stopping triggered after 7 epochs.
+Saved train/val loss & acc plot to results/plots/model4_train_val_loss_acc_deepsurv_20.png/pdf
+Total train patches: 31446
+Total val patches:   25726
+Validation C-index: 0.5111
+Job ended at Fri 18 Jul 12:53:56 BST 2025

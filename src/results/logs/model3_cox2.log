@@ -1,0 +1,56 @@
+Job started at Fri 11 Jul 09:33:13 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job ended at Fri 11 Jul 09:34:45 BST 2025
+Job started at Fri 11 Jul 09:43:07 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job ended at Fri 11 Jul 09:52:33 BST 2025
+Job started at Fri 11 Jul 09:56:31 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job started at Fri 11 Jul 10:06:00 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job started at Sat 12 Jul 02:47:51 BST 2025 on cx3-6-26.cx3.hpc.ic.ac.uk
+Dataset loading started...
+tissueWSIPatchDataset loaded
+Model initialized. Beginning training...
+Job ended at Sat 12 Jul 16:34:34 BST 2025
+Job started at Mon 14 Jul 10:22:45 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Dataset loading started...
+tissueWSIPatchDataset loaded
+Model initialized. Beginning training...Job started at Tue 15 Jul 13:55:30 BST 2025 on cx3-6-17.cx3.hpc.ic.ac.uk
+Dataset loading started
+TCGA-B0-4696-01Z-00-DX1: 10145 patches
+TCGA-AK-3428-01Z-00-DX1: 888 patches
+TCGA-DV-A4VX-01Z-00-DX1: 12441 patches
+TCGA-B0-4843-01Z-00-DX1: 3442 patches
+TCGA-BP-4987-01Z-00-DX1: 5239 patches
+TCGA-B0-4688-01Z-00-DX1: 7060 patches
+TCGA-DV-5573-01Z-00-DX1: 5785 patches
+TCGA-BP-5169-01Z-00-DX1: 11094 patches
+TCGA-CJ-4876-01Z-00-DX1: 8019 patches
+TCGA-B0-5690-01Z-00-DX1: 5201 patches
+TCGA-BP-5191-01Z-00-DX1: 7534 patches
+TCGA-B0-5100-01Z-00-DX1: 8120 patches
+TCGA-BP-4971-01Z-00-DX1: 6391 patches
+TCGA-BP-5185-01Z-00-DX1: 8368 patches
+TCGA-B0-5106-01Z-00-DX1: 10554 patches
+TCGA-B0-4945-01Z-00-DX1: 6837 patches
+TCGA-CJ-4873-01Z-00-DX1: 7382 patches
+TCGA-BP-4969-01Z-00-DX1: 2829 patches
+TCGA-B0-5713-01Z-00-DX1: 5718 patches
+TCGA-CJ-4870-01Z-00-DX1: 9084 patches
+TCGA-B2-4099-01Z-00-DX1: 578 patches
+TCGA-B8-4146-01Z-00-DX1: 3053 patches
+TCGA-B0-4823-01Z-00-DX1: 10542 patches
+TCGA-BP-4162-01Z-00-DX1: 1001 patches
+TCGA-BP-5189-01Z-00-DX1: 13109 patches
+TCGA-B8-A7U6-01Z-00-DX1: 4699 patches
+TCGA-BP-4160-01Z-00-DX1: 4495 patches
+TCGA-BP-5007-01Z-00-DX1: 5630 patches
+TCGA-A3-3363-01Z-00-DX1: 2379 patches
+TCGA-CJ-4637-01Z-00-DX1: 2114 patches
+TCGA-B0-4839-01Z-00-DX1: 7873 patches
+TCGA-CJ-4892-01Z-00-DX1: 4060 patches
+TCGA-BP-4801-01Z-00-DX1: 4002 patches
+TCGA-CJ-6031-01Z-00-DX1: 7898 patches
+TCGA-CJ-4908-01Z-00-DX1: 5716 patches
+TCGA-B0-4852-01Z-00-DX1: 3245 patches
+TCGA-A3-3320-01Z-00-DX1: 1496 patches
+TCGA-B0-4813-01Z-00-DX1: 14821 patches
+TCGA-BP-4782-01Z-00-DX1: 2382 patches
+TCGA-B0-4834-01Z-00-DX1: 15451 patches

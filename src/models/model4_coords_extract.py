@@ -82,7 +82,7 @@ val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/res
 
 # Take the first 20 unique slides (and all their patches)
 first_60_train = train_patches[train_patches['slide_id'].isin(train_patches['slide_id'].unique()[:60])]
-first_60_val   = val_patches[val_patches['slide_id'].isin(val_patches['slide_id'].unique()[:60])]
+first_60_val   = val_patches[val_patches['slide_id'].isin(val_patches['slide_id'].unique()[:30])]
 patch_cap = None # or None for all
 
 train_dataset = PrecomputedPatchDataset(first_60_train, transform=transform, max_patches_per_slide=patch_cap)
@@ -112,6 +112,13 @@ class MyEffNet(nn.Module):
 
 base_model = efficientnet_b0(weights=EfficientNet_B0_Weights.DEFAULT)
 model = MyEffNet(base_model).to(device)
+# Freeze all blocks except 6 and 7
+for name, param in model.features.named_parameters():
+    if "6" in name or "7" in name:
+        param.requires_grad = True
+    else:
+        param.requires_grad = False
+        
 train_patch_labels = train_dataset.df['label'].to_numpy()
 counts = np.bincount(train_patch_labels)
 if len(counts) < 2:
@@ -129,7 +136,7 @@ patience = 2
 epochs_since_improvement = 0
 best_model_state = None
 
-epochs = 10
+epochs = 20
 def print_patch_summary(dataset, name):
     patch_counts = dataset.df['slide_id'].value_counts()
     counts = patch_counts.values
@@ -218,10 +225,10 @@ for epoch in range(epochs):
     plt.ylabel("True label")
     plt.xlabel("Predicted label")
     plt.tight_layout()
-    plt.savefig(f"results/plots/model3_slide_confusion_matrix_epoch_patchsizenone{epoch + 1}.png")
+    plt.savefig(f"results/plots/model3_slide_confusion_matrix_60slides_epoch{epoch + 1}.png")
     plt.savefig(f"results/plots/model3_slide_confusion_matrix_epoch{epoch + 1}.pdf")
     plt.close(fig)
-    print(f"Saved confusion matrix as results/plots/model3_slide_confusion_matrix_patchsizenone_epoch{epoch + 1}.png/pdf")
+    print(f"Saved confusion matrix as results/plots/model3_slide_confusion_matrix_60slides_epoch{epoch + 1}.png/pdf")
     print(f"Slide-level Confusion Matrix:\n{slide_cm}")
     print("Slide-level classification report:")
     print(classification_report(slide_trues, slide_preds, target_names=["Alive", "Dead"]))
@@ -235,7 +242,7 @@ for epoch in range(epochs):
         best_val_acc = val_acc
         epochs_since_improvement = 0
         best_model_state = model.state_dict()
-        torch.save(model.state_dict(), "best_model_overfit.pth")
+        torch.save(model.state_dict(), "best_model_overfit_60slides.pth")
     else:
         epochs_since_improvement += 1
     if epochs_since_improvement >= patience:
@@ -257,7 +264,7 @@ plt.tight_layout()
 plt.savefig("results/plots/model3_train_val_loss_acc_30slides.png")
 plt.savefig("results/plots/model3_train_val_loss_acc_30slides.pdf")
 plt.close()
-print("Saved train/val loss & acc plot to results/plots/model3_train_val_loss_acc_30slides.png/pdf")
+print("Saved train/val loss & acc plot to results/plots/model3_train_val_loss_acc_60slides.png/pdf")
 print(f"Total train patches: {len(train_dataset)}")
 print(f"Total val patches:   {len(val_dataset)}")
 
@@ -266,7 +273,7 @@ elapsed = end_time - start_time
 # Print to stdout 
 print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)")
 # Save to file
-with open("results/plots/model4_30slides_runtime.txt", "w") as f:
+with open("results/plots/model4_60slides_runtime.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")
 
 

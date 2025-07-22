@@ -6,3 +6,4 @@ Traceback (most recent call last):
   File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/lifelines/utils/concordance.py", line 99, in _concordance_ratio
     raise ZeroDivisionError("No admissable pairs in the dataset.")
 ZeroDivisionError: No admissable pairs in the dataset.
+=>> PBS: job killed: walltime 86489 exceeded limit 86400

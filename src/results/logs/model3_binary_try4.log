@@ -1,0 +1,14 @@
+Job started at Fri 11 Jul 09:47:55 BST 2025 on cx3-6-25.cx3.hpc.ic.ac.uk
+Job started at Fri 11 Jul 09:50:30 BST 2025 on cx3-6-25.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [1.2779716e-05 1.8160687e-05]
+Job ended at Fri 11 Jul 09:58:21 BST 2025
+Job started at Fri 11 Jul 10:06:00 BST 2025 on cx3-6-25.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [1.2779716e-05 1.8160687e-05]
+Epoch 1/10, Train Acc: 0.8733, Val Acc: 0.6684, Train Loss: 0.2795, Val Loss: 22.1449
+Job started at Mon 14 Jul 11:12:26 BST 2025 on cx3-6-12.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [0.826086  1.1739141]
+Epoch 1/10, Train Acc: 0.8736, Val Acc: 0.6346, Train Loss: 0.2790, Val Loss: 2.2899
+Job started at Tue 15 Jul 10:21:05 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Class weights (Alive, Dead): [0.826086  1.1739141]
+Epoch 1/10, Train Acc: 0.8724, Val Acc: 0.6457, Train Loss: 0.2812, Val Loss: 7.0604
+Epoch 2/10, Train Acc: 0.9530, Val Acc: 0.6785, Train Loss: 0.1210, Val Loss: 2.1768

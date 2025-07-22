@@ -138,3 +138,27 @@ Traceback (most recent call last):
   File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
     raise ValueError(msg_err)
 ValueError: Input contains NaN.
+/rds/general/user/dla24/home/thesis/CNN/binary_images+tab50.py:47: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  patch_df = patch_df.groupby("slide_id", group_keys=False).apply(
+/rds/general/user/dla24/home/thesis/CNN/binary_images+tab50.py:47: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  patch_df = patch_df.groupby("slide_id", group_keys=False).apply(
+/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/numpy/_core/_methods.py:145: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/CNN/binary_images+tab50.py", line 267, in <module>
+    fpr, tpr, _ = roc_curve(slide_trues, slide_mean_probs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 1163, in roc_curve
+    fps, tps, thresholds = _binary_clf_curve(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 869, in _binary_clf_curve
+    assert_all_finite(y_score)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/sklearn/utils/validation.py", line 210, in assert_all_finite
+    _assert_all_finite(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/sklearn/utils/validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/sklearn/utils/validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.

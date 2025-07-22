@@ -1,0 +1,98 @@
+Job started at Mon 14 Jul 07:55:19 BST 2025 on cx3-11-7.cx3.hpc.ic.ac.uk
+[Optuna Trial] area_um=192 | batch_size=8 | lr=8.89e-04 | wd=1.10e-04 | dropout=0.57 | slide_acc=0.6000
+[Optuna Trial] area_um=224 | batch_size=8 | lr=1.86e-04 | wd=1.13e-05 | dropout=0.47 | slide_acc=0.7000
+[Optuna Trial] area_um=192 | batch_size=8 | lr=3.02e-05 | wd=3.35e-05 | dropout=0.45 | slide_acc=0.7000
+[Optuna Trial] area_um=256 | batch_size=32 | lr=5.71e-04 | wd=6.89e-06 | dropout=0.47 | slide_acc=0.7000
+[Optuna Trial] area_um=128 | batch_size=32 | lr=7.45e-05 | wd=2.14e-04 | dropout=0.32 | slide_acc=0.7000
+[Optuna Trial] area_um=192 | batch_size=8 | lr=1.64e-04 | wd=3.97e-06 | dropout=0.43 | slide_acc=0.7000
+Job started at Thu 17 Jul 00:36:42 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+==================================================
+TRIAL 0 | area_um=384 | batch_size=8 | lr=1.21e-04 | wd=4.52e-07 | dropout=0.31
+Epoch 01 | Train Acc: 0.722, Val Acc: 0.578, Slide Acc: 0.600
+Epoch 02 | Train Acc: 0.830, Val Acc: 0.571, Slide Acc: 0.650
+Epoch 03 | Train Acc: 0.870, Val Acc: 0.606, Slide Acc: 0.700
+----------------------------------------
+Trial 0 done: Val Slide Acc = 0.7000
+[Optuna Trial] area_um=384 | batch_size=8 | lr=1.21e-04 | wd=4.52e-07 | dropout=0.31 | slide_acc=0.7000
+==================================================
+TRIAL 1 | area_um=128 | batch_size=16 | lr=3.58e-04 | wd=1.56e-04 | dropout=0.36
+Epoch 01 | Train Acc: 0.928, Val Acc: 0.680, Slide Acc: 0.500
+Epoch 02 | Train Acc: 0.964, Val Acc: 0.693, Slide Acc: 0.650
+Epoch 03 | Train Acc: 0.975, Val Acc: 0.684, Slide Acc: 0.650
+----------------------------------------
+Trial 1 done: Val Slide Acc = 0.6500
+[Optuna Trial] area_um=128 | batch_size=16 | lr=3.58e-04 | wd=1.56e-04 | dropout=0.36 | slide_acc=0.6500
+==================================================
+TRIAL 2 | area_um=128 | batch_size=32 | lr=4.74e-04 | wd=8.61e-07 | dropout=0.28
+Epoch 01 | Train Acc: 0.816, Val Acc: 0.598, Slide Acc: 0.650
+Epoch 02 | Train Acc: 0.918, Val Acc: 0.559, Slide Acc: 0.500
+Epoch 03 | Train Acc: 0.947, Val Acc: 0.594, Slide Acc: 0.600
+----------------------------------------
+Trial 2 done: Val Slide Acc = 0.6000
+[Optuna Trial] area_um=128 | batch_size=32 | lr=4.74e-04 | wd=8.61e-07 | dropout=0.28 | slide_acc=0.6500
+==================================================
+TRIAL 3 | area_um=128 | batch_size=8 | lr=1.20e-05 | wd=4.58e-07 | dropout=0.22
+Epoch 01 | Train Acc: 0.791, Val Acc: 0.639, Slide Acc: 0.700
+Epoch 02 | Train Acc: 0.892, Val Acc: 0.656, Slide Acc: 0.650
+Epoch 03 | Train Acc: 0.917, Val Acc: 0.675, Slide Acc: 0.700
+----------------------------------------
+Trial 3 done: Val Slide Acc = 0.7000
+[Optuna Trial] area_um=128 | batch_size=8 | lr=1.20e-05 | wd=4.58e-07 | dropout=0.22 | slide_acc=0.7000
+==================================================
+TRIAL 4 | area_um=128 | batch_size=32 | lr=3.84e-05 | wd=1.71e-06 | dropout=0.46
+Epoch 01 | Train Acc: 0.585, Val Acc: 0.532, Slide Acc: 0.450
+Epoch 02 | Train Acc: 0.696, Val Acc: 0.561, Slide Acc: 0.650
+Epoch 03 | Train Acc: 0.747, Val Acc: 0.591, Slide Acc: 0.700
+----------------------------------------
+Trial 4 done: Val Slide Acc = 0.7000
+[Optuna Trial] area_um=128 | batch_size=32 | lr=3.84e-05 | wd=1.71e-06 | dropout=0.46 | slide_acc=0.7000
+==================================================
+TRIAL 5 | area_um=192 | batch_size=32 | lr=1.84e-04 | wd=7.56e-05 | dropout=0.34
+Epoch 01 | Train Acc: 0.684, Val Acc: 0.593, Slide Acc: 0.700
+Epoch 02 | Train Acc: 0.865, Val Acc: 0.561, Slide Acc: 0.600
+Epoch 03 | Train Acc: 0.917, Val Acc: 0.594, Slide Acc: 0.550
+----------------------------------------
+Trial 5 done: Val Slide Acc = 0.5500
+[Optuna Trial] area_um=192 | batch_size=32 | lr=1.84e-04 | wd=7.56e-05 | dropout=0.34 | slide_acc=0.7000
+==================================================
+TRIAL 6 | area_um=192 | batch_size=16 | lr=2.48e-05 | wd=1.11e-04 | dropout=0.56
+Epoch 01 | Train Acc: 0.582, Val Acc: 0.562, Slide Acc: 0.600
+Epoch 02 | Train Acc: 0.663, Val Acc: 0.565, Slide Acc: 0.650
+Epoch 03 | Train Acc: 0.714, Val Acc: 0.608, Slide Acc: 0.750
+----------------------------------------
+Trial 6 done: Val Slide Acc = 0.7500
+[Optuna Trial] area_um=192 | batch_size=16 | lr=2.48e-05 | wd=1.11e-04 | dropout=0.56 | slide_acc=0.7500
+==================================================
+TRIAL 7 | area_um=128 | batch_size=8 | lr=8.35e-04 | wd=1.78e-05 | dropout=0.58
+Epoch 01 | Train Acc: 0.710, Val Acc: 0.642, Slide Acc: 0.750
+Epoch 02 | Train Acc: 0.809, Val Acc: 0.585, Slide Acc: 0.650
+Epoch 03 | Train Acc: 0.848, Val Acc: 0.607, Slide Acc: 0.750
+----------------------------------------
+Trial 7 done: Val Slide Acc = 0.7500
+[Optuna Trial] area_um=128 | batch_size=8 | lr=8.35e-04 | wd=1.78e-05 | dropout=0.58 | slide_acc=0.7500
+==================================================
+TRIAL 8 | area_um=384 | batch_size=32 | lr=2.44e-04 | wd=2.54e-04 | dropout=0.24
+Epoch 01 | Train Acc: 0.685, Val Acc: 0.533, Slide Acc: 0.500
+Epoch 02 | Train Acc: 0.834, Val Acc: 0.592, Slide Acc: 0.700
+Epoch 03 | Train Acc: 0.919, Val Acc: 0.592, Slide Acc: 0.650
+----------------------------------------
+Trial 8 done: Val Slide Acc = 0.6500
+[Optuna Trial] area_um=384 | batch_size=32 | lr=2.44e-04 | wd=2.54e-04 | dropout=0.24 | slide_acc=0.7000
+==================================================
+TRIAL 9 | area_um=224 | batch_size=32 | lr=1.92e-04 | wd=3.32e-05 | dropout=0.47
+Epoch 01 | Train Acc: 0.610, Val Acc: 0.598, Slide Acc: 0.700
+Epoch 02 | Train Acc: 0.801, Val Acc: 0.604, Slide Acc: 0.650
+Epoch 03 | Train Acc: 0.890, Val Acc: 0.555, Slide Acc: 0.550
+----------------------------------------
+Trial 9 done: Val Slide Acc = 0.5500
+[Optuna Trial] area_um=224 | batch_size=32 | lr=1.92e-04 | wd=3.32e-05 | dropout=0.47 | slide_acc=0.7000
+======================================================================
+Best trial:
+Slide-level Acc: 0.7500
+  lr: 2.4844087551934078e-05
+  weight_decay: 0.00011136085331748044
+  dropout: 0.559411071280514
+  batch_size: 16
+  max_patches_per_slide: 100
+  area_um: 192
+Job ended at Thu 17 Jul 12:00:11 BST 2025

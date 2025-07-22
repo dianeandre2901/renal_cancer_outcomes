@@ -1,7 +1,0 @@
-Job started at Mon 14 Jul 07:55:19 BST 2025 on cx3-11-7.cx3.hpc.ic.ac.uk
-[Optuna Trial] area_um=192 | batch_size=8 | lr=8.89e-04 | wd=1.10e-04 | dropout=0.57 | slide_acc=0.6000
-[Optuna Trial] area_um=224 | batch_size=8 | lr=1.86e-04 | wd=1.13e-05 | dropout=0.47 | slide_acc=0.7000
-[Optuna Trial] area_um=192 | batch_size=8 | lr=3.02e-05 | wd=3.35e-05 | dropout=0.45 | slide_acc=0.7000
-[Optuna Trial] area_um=256 | batch_size=32 | lr=5.71e-04 | wd=6.89e-06 | dropout=0.47 | slide_acc=0.7000
-[Optuna Trial] area_um=128 | batch_size=32 | lr=7.45e-05 | wd=2.14e-04 | dropout=0.32 | slide_acc=0.7000
-[Optuna Trial] area_um=192 | batch_size=8 | lr=1.64e-04 | wd=3.97e-06 | dropout=0.43 | slide_acc=0.7000

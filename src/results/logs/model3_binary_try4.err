@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_binary-duplicate.py", line 249, in <module>
+    train_losses, val_losses, train_accs, val_accs = train_model(
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_binary-duplicate.py", line 198, in train_model
+    for images, labels, _ in train_loader:
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1515, in _next_data
+    return self._process_data(data, worker_id)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+    data.reraise()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/_utils.py", line 750, in reraise
+    raise exception
+TypeError: Caught TypeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/thesis/src/models/model3_binary-duplicate.py", line 98, in __getitem__
+    patch = self.transform(patch)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 95, in __call__
+    img = t(img)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 234, in __call__
+    return F.to_pil_image(pic, self.mode)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/transforms/functional.py", line 268, in to_pil_image
+    raise TypeError(f"pic should be Tensor or ndarray. Got {type(pic)}.")
+TypeError: pic should be Tensor or ndarray. Got <class 'PIL.Image.Image'>.
+
+=>> PBS: job killed: walltime 43220 exceeded limit 43200
+=>> PBS: job killed: walltime 43267 exceeded limit 43200
+=>> PBS: job killed: walltime 86515 exceeded limit 86400

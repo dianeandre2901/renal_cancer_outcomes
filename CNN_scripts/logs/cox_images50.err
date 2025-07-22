@@ -6,3 +6,8 @@ Traceback (most recent call last):
   File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/lifelines/utils/concordance.py", line 99, in _concordance_ratio
     raise ZeroDivisionError("No admissable pairs in the dataset.")
 ZeroDivisionError: No admissable pairs in the dataset.
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/CNN/cox_images50.py", line 322, in <module>
+    end_time = time.time()
+AttributeError: 'numpy.float64' object has no attribute 'time'
+=>> PBS: job killed: walltime 86445 exceeded limit 86400

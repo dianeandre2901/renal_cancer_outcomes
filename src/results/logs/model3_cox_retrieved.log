@@ -1,0 +1,10 @@
+Job started at Tue 15 Jul 16:44:35 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Epoch 1 Train Loss: nan
+Job ended at Tue 15 Jul 20:07:04 BST 2025
+Job started at Tue 15 Jul 20:24:41 BST 2025 on cx3-6-12.cx3.hpc.ic.ac.uk
+Epoch 1 Train Loss: nan
+Job ended at Wed 16 Jul 01:12:25 BST 2025
+Job started at Wed 16 Jul 11:43:51 BST 2025 on cx3-6-27.cx3.hpc.ic.ac.uk
+Epoch 1 Train Loss: nan
+Warning: Risk scores are not varying -> skipping normalization.
+Job ended at Wed 16 Jul 15:36:37 BST 2025

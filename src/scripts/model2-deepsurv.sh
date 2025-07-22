@@ -2,8 +2,8 @@
 #PBS -N model2_deepsurv
 #PBS -l select=1:ncpus=4:mem=32gb
 #PBS -l walltime=6:00:00
-#PBS -o _model2_deepsurv_$PBS_JOBID.log
-#PBS -e model2_deepsurv_$PBS_JOBID.err
+#PBS -o _model2_deepsurv.log
+#PBS -e model2_deepsurv.err
 
 
 

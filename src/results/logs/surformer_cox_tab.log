@@ -1,0 +1,46 @@
+Job started at Mon 21 Jul 06:17:37 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Using device: cpu
+Job ended at Mon 21 Jul 06:19:17 BST 2025
+Job started at Mon 21 Jul 14:04:02 BST 2025 on cx3-6-12.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 2293, 512])
+Sample tabular: tensor([[70.1000,  1.0000,  4.0000]])
+Job ended at Mon 21 Jul 14:06:39 BST 2025
+Job started at Mon 21 Jul 14:13:34 BST 2025 on cx3-6-21.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 2196, 512])
+Sample tabular: tensor([[65.7000,  4.0000,  3.0000]])
+Job ended at Mon 21 Jul 14:17:12 BST 2025
+Job started at Mon 21 Jul 15:30:28 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 1440, 512])
+Sample tabular: tensor([[75.4000,  1.0000,  2.0000]])
+Job ended at Mon 21 Jul 15:35:38 BST 2025
+Job started at Mon 21 Jul 15:43:38 BST 2025 on cx3-6-23.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 1264, 512])
+Sample tabular: tensor([[75.7000,  3.0000,  3.0000]])
+Job ended at Mon 21 Jul 15:48:00 BST 2025
+Job started at Mon 21 Jul 16:09:17 BST 2025 on cx3-6-22.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 5032, 512])
+Sample tabular: tensor([[74.5000,  4.0000,  4.0000]])
+Job ended at Mon 21 Jul 16:15:26 BST 2025
+Job started at Mon 21 Jul 16:42:29 BST 2025 on cx3-6-24.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 1446, 512])
+Sample tabular: tensor([[70.8000,  3.0000,  3.0000]])
+Job ended at Mon 21 Jul 16:46:50 BST 2025
+Job started at Mon 21 Jul 17:17:46 BST 2025 on cx3-6-25.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 1124, 512])
+Sample tabular: tensor([[53.9000,  1.0000,  1.0000]])
+Epoch 1 | Train Loss: -5.3747 | Val Loss: -5.1493 | C-Index: 0.7256
+Epoch 2 | Train Loss: -8.2369 | Val Loss: -6.1769 | C-Index: 0.7317
+Epoch 3 | Train Loss: -9.7615 | Val Loss: -7.2405 | C-Index: 0.7317
+Epoch 4 | Train Loss: -11.3613 | Val Loss: -8.3954 | C-Index: 0.7317
+Epoch 5 | Train Loss: -13.1087 | Val Loss: -9.6721 | C-Index: 0.7317
+Epoch 6 | Train Loss: -15.0636 | Val Loss: -11.0748 | C-Index: 0.7317
+Epoch 7 | Train Loss: -17.2283 | Val Loss: -12.6371 | C-Index: 0.7317
+Early stopping triggered at epoch 7
+Job ended at Mon 21 Jul 17:40:44 BST 2025

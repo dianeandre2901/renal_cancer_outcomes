@@ -1,0 +1,39 @@
+/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/autoencoder1.py", line 186, in <module>
+    for patches, os_days, event, _ in train_loader:
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 789, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/thesis/src/models/autoencoder1.py", line 51, in __getitem__
+    patches = torch.stack(patches)  # (N_patches, 3, 224, 224)
+TypeError: expected Tensor as element 0 in argument 0, but got Image
+/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/autoencoder1.py", line 189, in <module>
+    for patches, os_days, event, _ in train_loader:
+ValueError: not enough values to unpack (expected 4, got 3)
+/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+python: can't open file '/rds/general/user/dla24/home/thesis/src/models/autoencoder1.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/CNN+MIL.py", line 232, in <module>
+    c_index = concordance_index(all_os_days, [-r for r in all_risk_scores], all_events)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/lifelines/utils/concordance.py", line 91, in concordance_index
+    event_times, predicted_scores, event_observed = _preprocess_scoring_data(event_times, predicted_scores, event_observed)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/lifelines/utils/concordance.py", line 301, in _preprocess_scoring_data
+    raise ValueError("NaNs detected in inputs, please correct or drop.")
+ValueError: NaNs detected in inputs, please correct or drop.

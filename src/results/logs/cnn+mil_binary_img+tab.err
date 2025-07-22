@@ -1,0 +1,4 @@
+/rds/general/user/dla24/home/thesis/MIl/MIL_binary20_img+tab.py:50: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  patch_df = patch_df.groupby("slide_id", group_keys=False).apply(
+/rds/general/user/dla24/home/thesis/MIl/MIL_binary20_img+tab.py:50: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+  patch_df = patch_df.groupby("slide_id", group_keys=False).apply(

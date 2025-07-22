@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_model.py", line 297, in <module>
+    end_time = time.time()
+AttributeError: 'Tensor' object has no attribute 'time'. Did you mean: 'tile'?
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_model.py", line 316, in <module>
+    end_time = time.time()
+AttributeError: 'Tensor' object has no attribute 'time'. Did you mean: 'tile'?
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_model.py", line 337, in <module>
+    end_time = time.time()
+AttributeError: 'Tensor' object has no attribute 'time'. Did you mean: 'tile'?
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_model.py", line 337, in <module>
+    end_time = time.time()
+AttributeError: 'Tensor' object has no attribute 'time'. Did you mean: 'tile'?
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_model.py", line 367, in <module>
+    end_time = time.time()
+AttributeError: 'Tensor' object has no attribute 'time'. Did you mean: 'tile'?

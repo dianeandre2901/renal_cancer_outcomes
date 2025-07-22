@@ -14,3 +14,4 @@ Epoch 2/20 | Train Loss: 0.7368 | Val Loss: 2.4425 | Validation C-index: 0.5444
 Epoch 3/20 | Train Loss: 0.6669 | Val Loss: 1.9903 | Validation C-index: 0.5609
 Epoch 4/20 | Train Loss: 0.6180 | Val Loss: 2.2116 | Validation C-index: 0.5644
 Epoch 5/20 | Train Loss: 0.5757 | Val Loss: 2.3054 | Validation C-index: 0.5820
+Epoch 6/20 | Train Loss: 0.5453 | Val Loss: 3.4110 | Validation C-index: 0.5971

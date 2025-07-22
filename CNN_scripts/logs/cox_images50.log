@@ -17,3 +17,19 @@ Early stopping triggered after 4 epochs.
 Saved train/val loss & acc plot to results/plots/train_val_loss_cox_images50.png
 Total train patches: 40577
 Total val patches:   69794
+Validation C-index: 0.6267
+Saved C-statistic performance curve to results/plots/cox_images50_cstat_curve.png
+Job ended at Sun 20 Jul 12:06:22 BST 2025
+Job started at Sun 20 Jul 16:56:46 BST 2025 on cx3-11-4.cx3.hpc.ic.ac.uk
+Train set: 30 slides, 40577 patches
+  Avg patches/slide: 1352.6, min: 131, max: 3609
+Val set: 50 slides, 69794 patches
+  Avg patches/slide: 1395.9, min: 84, max: 5032
+Epoch 1/20 | Train Loss: 1.0116 | Val Loss: 2.5619 | Validation C-index: 0.5860
+Epoch 2/20 | Train Loss: 0.7975 | Val Loss: 3.4871 | Validation C-index: 0.6228
+Epoch 3/20 | Train Loss: 0.7242 | Val Loss: 2.4424 | Validation C-index: 0.6092
+Epoch 4/20 | Train Loss: 0.6853 | Val Loss: 2.6205 | Validation C-index: 0.5944
+Epoch 5/20 | Train Loss: 0.6528 | Val Loss: 2.2051 | Validation C-index: 0.6154
+Epoch 6/20 | Train Loss: 0.6307 | Val Loss: 3.2032 | Validation C-index: 0.6483
+Epoch 7/20 | Train Loss: 0.6031 | Val Loss: 3.0808 | Validation C-index: 0.6077
+Epoch 8/20 | Train Loss: 0.5833 | Val Loss: 2.6841 | Validation C-index: 0.6279

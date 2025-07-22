@@ -1,0 +1,127 @@
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 245, in <module>
+    x_sample, time_sample, event_sample, tab_sample = next(iter(train_loader))
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1515, in _next_data
+    return self._process_data(data, worker_id)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+    data.reraise()
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/_utils.py", line 750, in reraise
+    raise exception
+KeyError: Caught KeyError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 42, in __getitem__
+    tabular = self.tabular_data.loc[slide_id].values.astype(np.float32)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/core/indexing.py", line 1191, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/core/indexing.py", line 1431, in _getitem_axis
+    return self._get_label(key, axis=axis)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/core/indexing.py", line 1381, in _get_label
+    return self.obj.xs(label, axis=axis)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/core/generic.py", line 4320, in xs
+    loc = index.get_loc(key)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'TCGA-CJ-4870-01Z-00-DX1'
+
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 261, in <module>
+    loss = train_epoch(model, train_loader, optimizer)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 123, in train_epoch
+    risk = model(x, tabular)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 95, in forward
+    combined = torch.cat([surformer_out.unsqueeze(1), tabular_feat], dim=1)
+RuntimeError: Tensors must have same number of dimensions: got 3 and 2
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 261, in <module>
+    loss = train_epoch(model, train_loader, optimizer)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 123, in train_epoch
+    risk = model(x, tabular)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 96, in forward
+    return self.final_fc(combined).squeeze(-1)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x129 and 640x1)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 261, in <module>
+    loss = train_epoch(model, train_loader, optimizer)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 123, in train_epoch
+    risk = model(x, tabular)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 95, in forward
+    combined = torch.cat([surformer_out.squeeze(-1), tabular_feat], dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 261, in <module>
+    loss = train_epoch(model, train_loader, optimizer)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 123, in train_epoch
+    risk = model(x, tabular)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 95, in forward
+    combined = torch.cat([surformer_out.squeeze(-1), tabular_feat], dim=1)
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 262, in <module>
+    loss = train_epoch(model, train_loader, optimizer)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 124, in train_epoch
+    risk = model(x, tabular)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 97, in forward
+    return self.final_fc(combined).squeeze(-1)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x129 and 640x1)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 261, in <module>
+    loss = train_epoch(model, train_loader, optimizer)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 123, in train_epoch
+    risk = model(x, tabular)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 96, in forward
+    return self.final_fc(combined).squeeze(-1)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/rds/general/user/dla24/home/miniforge3/envs/thesis-hpc/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x129 and 640x1)
+Traceback (most recent call last):
+  File "/rds/general/user/dla24/home/thesis/src/models/surformer_cox_img_tab.py", line 380, in <module>
+    end_time = time.time()
+AttributeError: 'Tensor' object has no attribute 'time'. Did you mean: 'tile'?

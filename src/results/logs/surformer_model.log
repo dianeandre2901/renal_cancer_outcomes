@@ -1,0 +1,140 @@
+Job started at Sat 19 Jul 20:08:01 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Using device: cpu
+Job ended at Sat 19 Jul 20:11:09 BST 2025
+Job started at Sat 19 Jul 20:21:37 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Using device: cpu
+Warning: No valid samples for concordance index.
+Epoch 1 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 2 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 3 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 4 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 5 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 6 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 7 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 8 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 9 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 10 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 11 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 12 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 13 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 14 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 15 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 16 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 17 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 18 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 19 | Loss: nan | C-Index: nan
+Warning: No valid samples for concordance index.
+Epoch 20 | Loss: nan | C-Index: nan
+Job ended at Sat 19 Jul 20:40:35 BST 2025
+Job started at Sun 20 Jul 12:05:08 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 2830, 512])
+Sample time/event: tensor([1626.]) tensor([1.])
+Epoch 1 | Loss: -3.2643 | C-Index: 0.5942
+Epoch 2 | Loss: -6.2731 | C-Index: 0.4928
+Epoch 3 | Loss: -6.6776 | C-Index: 0.3478
+Epoch 4 | Loss: -6.9513 | C-Index: 0.5652
+Epoch 5 | Loss: -7.1880 | C-Index: 0.6377
+Epoch 6 | Loss: -7.4321 | C-Index: 0.6522
+Epoch 7 | Loss: -7.6798 | C-Index: 0.3478
+Epoch 8 | Loss: -7.9312 | C-Index: 0.6087
+Epoch 9 | Loss: -8.1767 | C-Index: 0.6232
+Epoch 10 | Loss: -8.4238 | C-Index: 0.5362
+Epoch 11 | Loss: -8.6797 | C-Index: 0.6087
+Epoch 12 | Loss: -8.9390 | C-Index: 0.4783
+Epoch 13 | Loss: -9.1822 | C-Index: 0.5797
+Epoch 14 | Loss: -9.4448 | C-Index: 0.3913
+Epoch 15 | Loss: -9.6990 | C-Index: 0.4493
+Epoch 16 | Loss: -9.9745 | C-Index: 0.5942
+Epoch 17 | Loss: -10.2514 | C-Index: 0.5942
+Epoch 18 | Loss: -10.5196 | C-Index: 0.5797
+Epoch 19 | Loss: -10.7926 | C-Index: 0.6957
+Epoch 20 | Loss: -11.0820 | C-Index: 0.6522
+Job ended at Sun 20 Jul 12:26:28 BST 2025
+Job started at Sun 20 Jul 12:36:04 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 1827, 512])
+Sample time/event: tensor([1955.]) tensor([0.])
+Epoch 1 | Train Loss: -3.3578 | Val Loss: -4.2876 | C-Index: 0.4203
+Epoch 2 | Train Loss: -6.5069 | Val Loss: -4.8896 | C-Index: 0.6812
+Epoch 3 | Train Loss: -6.9163 | Val Loss: -5.0605 | C-Index: 0.4058
+Epoch 4 | Train Loss: -7.1791 | Val Loss: -5.2379 | C-Index: 0.6014
+Epoch 5 | Train Loss: -7.4287 | Val Loss: -5.4061 | C-Index: 0.6232
+Epoch 6 | Train Loss: -7.6740 | Val Loss: -5.5765 | C-Index: 0.5362
+Epoch 7 | Train Loss: -7.8942 | Val Loss: -5.7454 | C-Index: 0.5652
+Epoch 8 | Train Loss: -8.1589 | Val Loss: -5.9178 | C-Index: 0.5362
+Epoch 9 | Train Loss: -8.4023 | Val Loss: -6.0894 | C-Index: 0.6377
+Epoch 10 | Train Loss: -8.6474 | Val Loss: -6.2657 | C-Index: 0.3043
+Epoch 11 | Train Loss: -8.9007 | Val Loss: -6.4445 | C-Index: 0.6232
+Epoch 12 | Train Loss: -9.1634 | Val Loss: -6.6251 | C-Index: 0.6087
+Epoch 13 | Train Loss: -9.4167 | Val Loss: -6.8074 | C-Index: 0.6667
+Epoch 14 | Train Loss: -9.6788 | Val Loss: -6.9929 | C-Index: 0.4203
+Epoch 15 | Train Loss: -9.9363 | Val Loss: -7.1827 | C-Index: 0.6522
+Epoch 16 | Train Loss: -10.2039 | Val Loss: -7.3724 | C-Index: 0.6232
+Epoch 17 | Train Loss: -10.4827 | Val Loss: -7.5650 | C-Index: 0.4058
+Epoch 18 | Train Loss: -10.7457 | Val Loss: -7.7605 | C-Index: 0.7536
+Epoch 19 | Train Loss: -11.0412 | Val Loss: -7.9579 | C-Index: 0.5362
+Epoch 20 | Train Loss: -11.3115 | Val Loss: -8.1588 | C-Index: 0.4348
+Job ended at Sun 20 Jul 13:01:30 BST 2025
+Job started at Sun 20 Jul 13:18:30 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 1719, 512])
+Sample time/event: tensor([1776.]) tensor([0.])
+Epoch 1 | Train Loss: -3.9091 | Val Loss: -4.2159 | C-Index: 0.5122
+Epoch 2 | Train Loss: -6.4277 | Val Loss: -4.5317 | C-Index: 0.5244
+Epoch 3 | Train Loss: -6.8238 | Val Loss: -4.7831 | C-Index: 0.6646
+Epoch 4 | Train Loss: -7.1908 | Val Loss: -5.0202 | C-Index: 0.5183
+Epoch 5 | Train Loss: -7.5430 | Val Loss: -5.2612 | C-Index: 0.6280
+Epoch 6 | Train Loss: -7.9156 | Val Loss: -5.5071 | C-Index: 0.5427
+Epoch 7 | Train Loss: -8.2752 | Val Loss: -5.7573 | C-Index: 0.7073
+Epoch 8 | Train Loss: -8.6555 | Val Loss: -6.0112 | C-Index: 0.6341
+Epoch 9 | Train Loss: -9.0302 | Val Loss: -6.2704 | C-Index: 0.5732
+Epoch 10 | Train Loss: -9.4257 | Val Loss: -6.5354 | C-Index: 0.6341
+Epoch 11 | Train Loss: -9.8319 | Val Loss: -6.8061 | C-Index: 0.5488
+Epoch 12 | Train Loss: -10.2382 | Val Loss: -7.0821 | C-Index: 0.5793
+Early stopping triggered at epoch 12
+Job ended at Sun 20 Jul 13:42:57 BST 2025
+Job started at Sun 20 Jul 13:48:22 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 153, 512])
+Sample time/event: tensor([480.]) tensor([1.])
+Epoch 1 | Train Loss: -4.7903 | Val Loss: -4.4427 | C-Index: 0.4390
+Epoch 2 | Train Loss: -6.7383 | Val Loss: -4.7732 | C-Index: 0.7988
+Epoch 3 | Train Loss: -7.2275 | Val Loss: -5.0873 | C-Index: 0.5183
+Epoch 4 | Train Loss: -7.7013 | Val Loss: -5.4075 | C-Index: 0.6768
+Epoch 5 | Train Loss: -8.1961 | Val Loss: -5.7360 | C-Index: 0.5427
+Epoch 6 | Train Loss: -8.6916 | Val Loss: -6.0735 | C-Index: 0.7622
+Epoch 7 | Train Loss: -9.1912 | Val Loss: -6.4196 | C-Index: 0.6890
+Early stopping triggered at epoch 7
+Job ended at Sun 20 Jul 14:05:29 BST 2025
+Job started at Sun 20 Jul 19:50:56 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Using device: cpu
+Sample input shape: torch.Size([1, 153, 512])
+Sample time/event: tensor([480.]) tensor([1.])
+Epoch 1 | Train Loss: -4.8105 | Val Loss: -4.5645 | C-Index: 0.4817
+Epoch 2 | Train Loss: -6.9266 | Val Loss: -4.9001 | C-Index: 0.6463
+Epoch 3 | Train Loss: -7.4260 | Val Loss: -5.2216 | C-Index: 0.5549
+Epoch 4 | Train Loss: -7.9142 | Val Loss: -5.5495 | C-Index: 0.5976
+Epoch 5 | Train Loss: -8.4037 | Val Loss: -5.8828 | C-Index: 0.5884
+Epoch 6 | Train Loss: -8.9079 | Val Loss: -6.2251 | C-Index: 0.5976
+Epoch 7 | Train Loss: -9.4159 | Val Loss: -6.5731 | C-Index: 0.6098
+Early stopping triggered at epoch 7
+Job ended at Sun 20 Jul 20:07:13 BST 2025

@@ -1,0 +1,83 @@
+Job started at Sat 19 Jul 19:40:32 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Job ended at Sat 19 Jul 19:42:55 BST 2025
+Job started at Sat 19 Jul 20:15:07 BST 2025 on cx3-6-18.cx3.hpc.ic.ac.uk
+Job ended at Sat 19 Jul 20:17:27 BST 2025
+Job started at Sat 19 Jul 20:34:24 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Job ended at Sat 19 Jul 20:36:08 BST 2025
+Job started at Sat 19 Jul 21:05:25 BST 2025 on cx3-4-25.cx3.hpc.ic.ac.uk
+Train set event counts:
+event
+1    10
+0    10
+Name: count, dtype: int64
+Val set event counts:
+event
+0    10
+1    10
+Name: count, dtype: int64
+Train set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Job ended at Sat 19 Jul 21:11:46 BST 2025
+Job started at Sun 20 Jul 12:17:52 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Train set event counts:
+event
+1    10
+0    10
+Name: count, dtype: int64
+Val set event counts:
+event
+0    10
+1    10
+Name: count, dtype: int64
+Train set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Job ended at Sun 20 Jul 12:22:00 BST 2025
+Job started at Sun 20 Jul 12:28:55 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Train set event counts:
+event
+1    10
+0    10
+Name: count, dtype: int64
+Val set event counts:
+event
+0    10
+1    10
+Name: count, dtype: int64
+Train set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Job ended at Sun 20 Jul 12:33:03 BST 2025
+Job started at Sun 20 Jul 13:04:42 BST 2025 on cx3-4-26.cx3.hpc.ic.ac.uk
+Train set event counts:
+event
+1    10
+0    10
+Name: count, dtype: int64
+Val set event counts:
+event
+0    10
+1    10
+Name: count, dtype: int64
+Train set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Val set: 20 slides, 2000 patches
+  Avg patches/slide: 100.0, min: 100, max: 100
+Epoch 1/20 | Train Loss: 1.4005 | Train C-index: 0.637 | Val Loss: 0.6855 | Val C-index: 0.567
+Epoch 2/20 | Train Loss: 1.2262 | Train C-index: 0.730 | Val Loss: 0.7024 | Val C-index: 0.560
+Epoch 3/20 | Train Loss: 1.1691 | Train C-index: 0.747 | Val Loss: 0.7274 | Val C-index: 0.577
+Epoch 4/20 | Train Loss: 1.0801 | Train C-index: 0.768 | Val Loss: 0.7369 | Val C-index: 0.573
+Epoch 5/20 | Train Loss: 1.0036 | Train C-index: 0.793 | Val Loss: 0.7807 | Val C-index: 0.576
+Early stopping triggered after 5 epochs.
+Saved loss plot to results/plots/MIL_cox_images20_train_val_loss.png
+Saved C-index plot to results/plots/MIL_cox_images20_train_val_cindex.png
+Saved calibration plot to results/plots/MIL_cox_images20_calibration_loss_curve.png
+Saved C-Statistic ROC-style visual curve to results/plots/MIL_cox_images20_cstat_visual_curve.png
+Total train patches: 2000
+Total val patches:   2000
+Total script running time: 25.29 minutes (1517.6 seconds)
+Job ended at Sun 20 Jul 13:31:01 BST 2025

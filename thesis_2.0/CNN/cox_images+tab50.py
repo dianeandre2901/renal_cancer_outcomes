@@ -29,8 +29,8 @@ start_time = time.time()
 
 
 # Load data
-df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
-df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
+df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
+df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
 df_train['slide_id'] = df_train['slide_id'].astype(str)
 df_val['slide_id'] = df_val['slide_id'].astype(str)
 df_train = df_train[['slide_id', 'os_days', 'event', 'tumour_grade', 'tumour_stage', 'age_at_diagnosis_years']]
@@ -92,8 +92,8 @@ def skip_censored_collate_fn(batch):
     return imgs, tabulars, slide_ids, times_tensor, events_tensor
 
 # Load and filter CSV
-train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
-val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
+train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
+val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
 
 # Take the first 50 unique slides (and all their patches)
 first_50_train = train_patches[train_patches['slide_id'].isin(train_patches['slide_id'].unique()[:50])]
@@ -107,7 +107,7 @@ val_dataset   = PrecomputedPatchDataset(first_100_val, df_val, transform=transfo
 #val_dataset   = PrecomputedPatchDataset("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv", df_val, transform=transform, max_patches_per_slide=patch_cap)
 train_loader = DataLoader(
     train_dataset, 
-    batch_size=16, 
+    batch_size=8, 
     shuffle=True, 
     num_workers=2,
     collate_fn=skip_censored_collate_fn
@@ -115,7 +115,7 @@ train_loader = DataLoader(
 
 val_loader = DataLoader(
     val_dataset, 
-    batch_size=16, 
+    batch_size=8, 
     shuffle=False, 
     num_workers=2,
     collate_fn=skip_censored_collate_fn
@@ -162,7 +162,7 @@ def cox_loss(risk, time, event, eps=1e-8):
 optimizer = torch.optim.Adam(model.parameters(), lr=2.4844087551934078e-05, weight_decay=0.00011136085331748)
 # Early stopping
 best_val_cindex = 0
-patience = 2
+patience = 10
 epochs_since_improvement = 0
 best_model_state = None
 

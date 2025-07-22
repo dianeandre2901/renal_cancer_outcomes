@@ -6,7 +6,8 @@ based on precomputed tissue coordinates. Patches inherit slide-level labels. At 
 patch predictions are aggregated (mean probability) to derive a slide-level prediction.
 Includes patch- and slide-level accuracy, confusion matrices, and loss/accuracy curves.
 """
-
+import os
+os.makedirs("results/plots", exist_ok=True)
 from sklearn.metrics import roc_curve, auc
 from scipy.interpolate import make_interp_spline
 from matplotlib import pyplot as plt
@@ -34,8 +35,8 @@ start_time = time.time()
 
 
 # Load data
-df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
-df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
+df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
+df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
 df_train['slide_id'] = df_train['slide_id'].astype(str)
 df_train = df_train.drop(columns=["event"])
 df_val = df_val.drop(columns=["event"])
@@ -79,10 +80,10 @@ transform = transforms.Compose([
 
 
 # Load and filter CSV
-train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
-val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
+train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
+val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
 
-# Take the first 20 unique slides (and all their patches)
+# Take the first 100 unique slides (and all their patches)
 first_100_train = train_patches[train_patches['slide_id'].isin(train_patches['slide_id'].unique()[:100])]
 first_100_val   = val_patches[val_patches['slide_id'].isin(val_patches['slide_id'].unique()[:100])]
 patch_cap = 100 # or None for all
@@ -135,7 +136,7 @@ print(f"Class weights (Alive, Dead): {class_weights.cpu().numpy()}")
 optimizer = torch.optim.Adam(model.parameters(), lr=2.4844087551934078e-05, weight_decay=0.00011136085331748044 )
 # Early stopping
 best_val_acc = 0
-patience = 2
+patience = 10
 epochs_since_improvement = 0
 best_model_state = None
 
@@ -235,39 +236,11 @@ for epoch in range(epochs):
     print("Slide-level classification report:")
     print(classification_report(slide_trues, slide_preds, target_names=["Alive", "Dead"]))
 
-    # --- ROC Curve (Slide-level) ---
-    # Get mean probs per slide (same as in slide_pred_classes)
-    slide_mean_probs = [np.mean(slide_probs[sid]) for sid in slide_trues]
-
-    # Compute ROC
-    fpr, tpr, _ = roc_curve(slide_trues, slide_mean_probs)
-    roc_auc = auc(fpr, tpr)
-
-    # Smooth ROC curve
-    fpr_unique, idx_unique = np.unique(fpr, return_index=True)
-    tpr_unique = tpr[idx_unique]
-    fpr_smooth = np.linspace(0, 1, 200)
-    tpr_spline = make_interp_spline(fpr_unique, tpr_unique, k=2)
-    tpr_smooth = tpr_spline(fpr_smooth)
-
-    plt.figure()
-    plt.plot(fpr_smooth, tpr_smooth, lw=2, label=f'ROC Curve (AUC = {roc_auc:.2f})', color='darkorange')
-    plt.plot([0, 1], [0, 1], linestyle='--', color='gray')
-    plt.xlabel("False Positive Rate")
-    plt.ylabel("True Positive Rate")
-    plt.title("Slide-level ROC Curve")
-    plt.legend(loc="lower right")
-    plt.tight_layout()
-    plt.savefig(f"results/plots/CNN_binary_images20_slide_ROC_epoch{epoch + 1}.png")
-    plt.close()
-    print(f"Saved ROC curve as results/plots/CNN_binary_images100_slide_ROC_epoch{epoch + 1}.png")
-
-
     print(f"Epoch {epoch + 1}/{epochs} | "
           f"Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.3f} | "
           f"Val Loss: {val_loss:.4f} | Val Acc: {val_acc:.3f} | "
           f"Slide Acc: {slide_acc:.3f}")
-
+    
     if val_acc > best_val_acc:
         best_val_acc = val_acc
         epochs_since_improvement = 0
@@ -278,6 +251,31 @@ for epoch in range(epochs):
     if epochs_since_improvement >= patience:
         print(f"Early stopping triggered after {epoch + 1} epochs.")
         break
+
+
+# --- Final ROC Curve (Slide-level) ---
+slide_mean_probs = [np.mean(slide_probs[sid]) for sid in slide_trues]
+fpr, tpr, _ = roc_curve(slide_trues, slide_mean_probs)
+roc_auc = auc(fpr, tpr)
+
+fpr_unique, idx_unique = np.unique(fpr, return_index=True)
+tpr_unique = tpr[idx_unique]
+fpr_smooth = np.linspace(0, 1, 200)
+tpr_spline = make_interp_spline(fpr_unique, tpr_unique, k=2)
+tpr_smooth = tpr_spline(fpr_smooth)
+
+plt.figure()
+plt.plot(fpr_smooth, tpr_smooth, lw=2, label=f'ROC Curve (AUC = {roc_auc:.2f})', color='darkorange')
+plt.plot([0, 1], [0, 1], linestyle='--', color='gray')
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title("Final Slide-level ROC Curve")
+plt.legend(loc="lower right")
+plt.tight_layout()
+plt.savefig("results/plots/CNN_binary_images100_final_slide_ROC.png")
+plt.close()
+print("Saved final ROC curve as results/plots/CNN_binary_images100_final_slide_ROC.png")
+
 
 epochs_range = range(1, len(train_loss_list) + 1)
 plt.figure(figsize=(8,6))
@@ -335,5 +333,4 @@ print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} secon
 # Save to file
 with open("results/plots/CNN_binary_images100_runtime_aftertuning.txt", "w") as f:
     f.write(f"Running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)\n")
-
 

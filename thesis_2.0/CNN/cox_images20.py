@@ -7,7 +7,6 @@ The model is using Cox proportional hazards loss.
 """
 
 from matplotlib import pyplot as plt
-from seaborn import heatmap, set_style
 import openslide
 import seaborn as sns
 import torch
@@ -21,16 +20,16 @@ from torchvision.models import efficientnet_b0, EfficientNet_B0_Weights
 import torch.nn as nn
 from collections import defaultdict
 from collections import Counter
-import time
+import time as time_module
 from lifelines.utils import concordance_index
 # 
-start_time = time.time()
+start_time = time_module.time()
 
 
 
 # Load data
-df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
-df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
+df_train = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/val_40x.csv")
+df_val = pd.read_csv("/rds/general/user/dla24/home/thesis/TGCA_dataset/train_40x.csv")
 df_train['slide_id'] = df_train['slide_id'].astype(str)
 df_val['slide_id'] = df_val['slide_id'].astype(str)
 df_train = df_train[['slide_id', 'os_days', 'event']]
@@ -86,8 +85,8 @@ def skip_censored_collate_fn(batch):
     return imgs, slide_ids, times_tensor, events_tensor
 
 # Load and filter CSV
-train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
-val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
+train_patches = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv")
+val_patches   = pd.read_csv("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_train.csv")
 
 # Take the first 20 unique slides (and all their patches)
 first_20_train = train_patches[train_patches['slide_id'].isin(train_patches['slide_id'].unique()[:20])]
@@ -101,7 +100,7 @@ val_dataset   = PrecomputedPatchDataset(first_100_val, df_val, transform=transfo
 #val_dataset   = PrecomputedPatchDataset("/rds/general/user/dla24/home/thesis/src/scripts/results/patch_coords_val.csv", df_val, transform=transform, max_patches_per_slide=patch_cap)
 train_loader = DataLoader(
     train_dataset, 
-    batch_size=16, 
+    batch_size=8, 
     shuffle=True, 
     num_workers=2,
     collate_fn=skip_censored_collate_fn
@@ -109,7 +108,7 @@ train_loader = DataLoader(
 
 val_loader = DataLoader(
     val_dataset, 
-    batch_size=16, 
+    batch_size=8, 
     shuffle=False, 
     num_workers=2,
     collate_fn=skip_censored_collate_fn
@@ -153,7 +152,7 @@ def cox_loss(risk, time, event, eps=1e-8):
 optimizer = torch.optim.Adam(model.parameters(), lr=2.4844087551934078e-05, weight_decay=0.00011136085331748)
 # Early stopping
 best_val_cindex = 0
-patience = 2
+patience = 20
 epochs_since_improvement = 0
 best_model_state = None
 
@@ -239,7 +238,7 @@ for epoch in range(epochs):
         best_val_cindex = cindex
         epochs_since_improvement = 0
         best_model_state = model.state_dict()
-        torch.save(model.state_dict(), "cox_images20.pth")
+        torch.save(model.state_dict(), "cox_image20.pth")
     else:
         epochs_since_improvement += 1
     if epochs_since_improvement >= patience:
@@ -320,7 +319,8 @@ if best_model_state is not None:
     print("Saved C-statistic performance curve to results/plots/cox_images20_cstat_curve.png")
 
 
-end_time = time.time()
+import time as time_module
+end_time = time_module.time()
 elapsed = end_time - start_time
 # Print to stdout 
 print(f"Total script running time: {elapsed/60:.2f} minutes ({elapsed:.1f} seconds)")
